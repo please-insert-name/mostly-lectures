@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudoku – Dein Rätsel</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#17243a;--muted:#718096;--blue:#3768e8;--blue-soft:#e8efff;--line:#d9e1ed;--thick:#52647f;--good:#16845b;--bad:#d94848}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+header{padding:26px 20px 14px;text-align:center}header .eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:800}h1{margin:7px 0 5px;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.045em}header p{margin:0;color:var(--muted)}
+main{max-width:980px;margin:18px auto 40px;padding:0 16px;display:grid;grid-template-columns:minmax(290px,520px) minmax(240px,310px);gap:22px;align-items:start}
+.panel{background:var(--card);border:1px solid #e7ecf4;border-radius:20px;padding:18px;box-shadow:0 10px 35px #1b31500a}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.pill{background:#f0f4fa;border-radius:999px;padding:7px 11px;font-size:.82rem;color:#52647f;font-weight:700}
+#board{display:grid;grid-template-columns:repeat(9,1fr);border:2px solid var(--thick);border-radius:7px;overflow:hidden;aspect-ratio:1;background:white}
+.cell{border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;min-width:0;padding:0;font-size:clamp(1rem,3vw,1.7rem);font-weight:600;color:var(--blue);cursor:pointer;position:relative}
+.cell:nth-child(3n){border-right:2px solid var(--thick)}.cell:nth-child(9n){border-right:0}
+.cell:nth-child(n+19):nth-child(-n+27),.cell:nth-child(n+46):nth-child(-n+54){border-bottom:2px solid var(--thick)}
+.cell.given{color:#24344e;font-weight:800;cursor:default}.cell.selected{background:#dce7ff!important;box-shadow:inset 0 0 0 2px var(--blue);z-index:1}
+.cell.peer{background:#f1f5fc}.cell.same{background:#e2ebff}.cell.conflict{color:var(--bad);background:#fff0f0}.cell.hinted{animation:flash .65s ease}@keyframes flash{50%{background:#c7f4df}}
+.controls{display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin-top:14px}.num{border:1px solid var(--line);background:white;border-radius:10px;padding:11px 0;font-size:1rem;font-weight:800;color:var(--ink);cursor:pointer}.num:hover{border-color:var(--blue);background:var(--blue-soft)}.num:disabled{opacity:.35;cursor:default}
+.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:14px}
+button,select{font:inherit}.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:11px 12px;border-radius:11px;font-weight:750;cursor:pointer}.btn:hover{border-color:#9bb2ed}.btn.primary{background:var(--blue);border-color:var(--blue);color:white}.btn.primary:hover{background:#2856cf}.btn:focus-visible,.cell:focus-visible,.num:focus-visible,select:focus-visible{outline:3px solid #9cb5ff;outline-offset:2px}
+.side h2{font-size:1.08rem;margin:0 0 14px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}.field label{font-size:.83rem;color:var(--muted);font-weight:750}.field select{border:1px solid var(--line);border-radius:10px;background:white;padding:10px;color:var(--ink)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.stat{background:#f6f8fc;padding:12px;border-radius:12px}.stat span{display:block;color:var(--muted);font-size:.75rem;margin-bottom:4px}.stat strong{font-size:1.25rem;font-variant-numeric:tabular-nums}
+.message{padding:12px;border-radius:11px;background:#f2f6ff;color:#415578;font-size:.9rem;line-height:1.45;min-height:46px}.message.success{background:#e7f8ef;color:#116b49}.message.error{background:#fff0f0;color:#a52b2b}
+.help{font-size:.85rem;color:var(--muted);line-height:1.55;margin-top:16px}.help strong{color:var(--ink)}footer{text-align:center;color:#8994a7;font-size:.78rem;padding:0 16px 25px}
+@media(max-width:760px){main{grid-template-columns:1fr;max-width:540px;margin-top:8px}.side{order:2}.panel{padding:13px}header{padding-top:20px}.cell{font-size:clamp(1rem,5vw,1.55rem)}.num{padding:10px 0}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">Eine kleine Denkpause</div><h1>Sudoku</h1><p>Neun Zahlen. Eine Lösung. Dein Tempo.</p></header>
+<main>
+<section class="panel">
+ <div class="topline"><span class="pill" id="difficultyTag">Mittel</span><span class="pill">⏱ <span id="timer">00:00</span></span></div>
+ <div id="board" role="grid" aria-label="Sudoku-Spielbrett"></div>
+ <div class="controls" id="numberPad" aria-label="Zahlen auswählen"></div>
+ <div class="actions">
+  <button class="btn" id="erase">⌫ Löschen</button><button class="btn" id="notes">✎ Notizen: Aus</button>
+  <button class="btn" id="hint">✦ Tipp</button><button class="btn" id="check">✓ Prüfen</button>
+ </div>
+</section>
+<aside class="panel side">
+ <h2>Dein Rätsel</h2>
+ <div class="field"><label for="difficulty">Schwierigkeit</label><select id="difficulty"><option value="easy">Leicht</option><option value="medium" selected>Mittel</option><option value="hard">Schwer</option></select></div>
+ <button class="btn primary" id="newGame" style="width:100%">Neues Sudoku</button>
+ <div class="stats"><div class="stat"><span>Ausgefüllt</span><strong id="progress">0 / 81</strong></div><div class="stat"><span>Fehler</span><strong id="mistakes">0</strong></div></div>
+ <div class="message" id="message" role="status">Wähle ein Feld und dann eine Zahl. Viel Spaß!</div>
+ <div class="help"><strong>So geht’s</strong><br>Fülle jede Zeile, jede Spalte und jeden 3×3-Block mit den Zahlen 1 bis 9 – jede Zahl darf dort nur einmal vorkommen.<br><br><strong>Tastatur</strong><br>1–9 eintragen · Pfeiltasten bewegen · Entf löscht das Feld.</div>
+</aside>
+</main>
+<footer>Dein Spielstand bleibt in diesem Tab, solange du die Seite geöffnet hast.</footer>
+<script>
+(() => {
+ const boardEl=document.querySelector('#board'), pad=document.querySelector('#numberPad');
+ const $=id=>document.getElementById(id);
+ let solution=[], puzzle=[], values=[], selected=-1, notesMode=false, notes=Array.from({length:81},()=>new Set()), mistakes=0, seconds=0, timerId=null, finished=false;
+ const difficultyClues={easy:42,medium:34,hard:29};
+ function shuffled(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+ function candidates(grid,i){let r=Math.floor(i/9),c=i%9,s=new Set();for(let k=0;k<9;k++){s.add(grid[r*9+k]);s.add(grid[k*9+c])}let br=Math.floor(r/3)*3,bc=Math.floor(c/3)*3;for(let y=0;y<3;y++)for(let x=0;x<3;x++)s.add(grid[(br+y)*9+bc+x]);let out=[];for(let n=1;n<=9;n++)if(!s.has(n))out.push(n);return out}
+ function solve(grid, random=false){let best=-1,opts=null;for(let i=0;i<81;i++)if(!grid[i]){let o=candidates(grid,i);if(!o.length)return false;if(!opts||o.length<opts.length){best=i;opts=o;if(o.length===1)break}}if(best<0)return true;if(random)shuffled(opts);for(let n of opts){grid[best]=n;if(solve(grid,random))return true;grid[best]=0}return false}
+ function makePuzzle(){let grid=Array(81).fill(0);solve(grid,true);solution=grid.slice();puzzle=grid.slice();let target=difficultyClues[$('difficulty').value];let indices=shuffled(Array.from({length:81},(_,i)=>i));let remove=81-target;for(let i of indices){if(!remove)break;let old=puzzle[i];puzzle[i]=0;let copy=puzzle.slice();if(!solve(copy,false)||copy.some((n,j)=>n!==solution[j]))puzzle[i]=old;else remove--}values=puzzle.slice()}
+ function peers(i,j){return Math.floor(i/9)===Math.floor(j/9)||i%9===j%9||(Math.floor(Math.floor(i/9)/3)===Math.floor(Math.floor(j/9)/3)&&Math.floor((i%9)/3)===Math.floor((j%9)/3))}
+ function render(){boardEl.innerHTML='';for(let i=0;i<81;i++){let b=document.createElement('button');b.className='cell'+(puzzle[i]?' given':'');b.type='button';b.setAttribute('role','gridcell');b.setAttribute('aria-label',`Zeile ${Math.floor(i/9)+1}, Spalte ${i%9+1}${values[i]?', Zahl '+values[i]:', leer'}`);b.dataset.i=i;
+ if(values[i])b.textContent=values[i];else if(notes[i].size)b.innerHTML=[...notes[i]].sort().join(' '),b.style.fontSize='clamp(.48rem,1.5vw,.75rem)';
+ if(selected>=0){if(i===selected)b.classList.add('selected');else if(peers(i,selected))b.classList.add('peer');if(values[selected]&&values[i]===values[selected])b.classList.add('same')}
+ if(values[i]&&values[i]!==solution[i])b.classList.add('conflict');
+ b.addEventListener('click',()=>{selected=i;render()});boardEl.appendChild(b)}
+ for(let n=1;n<=9;n++){let b=pad.children[n-1];b.disabled=finished;b.style.opacity=values.filter(v=>v===n).length>=9?'.4':'1'}updateStats()}
+ function updateStats(){let count=values.filter(Boolean).length;$('progress').textContent=`${count} / 81`;$('mistakes').textContent=mistakes}
+ function say(msg,type=''){let el=$('message');el.textContent=msg;el.className='message'+(type?' '+type:'')}
+ function enter(n){if(selected<0){say('Wähle zuerst ein Feld aus.');return}if(puzzle[selected]||finished)return;if(notesMode){if(values[selected])values[selected]=0;if(notes[selected].has(n))notes[selected].delete(n);else notes[selected].add(n)}else{values[selected]=n;notes[selected].clear();if(n!==solution[selected]){mistakes++;say('Noch nicht ganz – probiere eine andere Zahl.','error')}else say('Gut gemacht! Das sieht richtig aus.','success')}render();if(values.every((v,i)=>v===solution[i]))win()}
+ function win(){finished=true;clearInterval(timerId);say(`Geschafft! Du hast das Sudoku in ${$('timer').textContent} gelöst. 🎉`,'success');render()}
+ function start(){clearInterval(timerId);makePuzzle();selected=-1;notes=Array.from({length:81},()=>new Set());notesMode=false;mistakes=0;seconds=0;finished=false;$('notes').textContent='✎ Notizen: Aus';$('difficultyTag').textContent=$('difficulty').selectedOptions[0].text;$('timer').textContent='00:00';say('Neues Rätsel bereit – viel Spaß!');pad.innerHTML='';for(let n=1;n<=9;n++){let b=document.createElement('button');b.className='num';b.textContent=n;b.addEventListener('click',()=>enter(n));pad.appendChild(b)}render();timerId=setInterval(()=>{if(!finished){seconds++;$('timer').textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0')}},1000)}
+ $('newGame').addEventListener('click',start);
+ $('erase').addEventListener('click',()=>{if(selected>=0&&!puzzle[selected]&&!finished){values[selected]=0;notes[selected].clear();render();say('Feld geleert.')}})
+ $('notes').addEventListener('click',()=>{notesMode=!notesMode;$('notes').textContent='✎ Notizen: '+(notesMode?'An':'Aus');say(notesMode?'Notizmodus aktiv: Wähle mögliche Zahlen.':'Notizmodus ausgeschaltet.')})
+ $('hint').addEventListener('click',()=>{if(finished)return;let options=values.map((v,i)=>!puzzle[i]&&v!==solution[i]?i:-1).filter(i=>i>=0);if(!options.length)options=values.map((v,i)=>!v?i:-1).filter(i=>i>=0);if(!options.length)return;let i=selected>=0&&options.includes(selected)?selected:options[Math.floor(Math.random()*options.length)];selected=i;values[i]=solution[i];notes[i].clear();render();let cell=boardEl.children[i];cell.classList.add('hinted');say('Ein kleiner Schubs: Die richtige Zahl wurde eingetragen.');if(values.every((v,j)=>v===solution[j]))win()})
+ $('check').addEventListener('click',()=>{if(values.every((v,i)=>!v||v===solution[i])){if(values.every(Boolean))win();else say('Bisher ist alles richtig. Fülle die restlichen Felder aus.','success')}else{say('Einige Zahlen stimmen noch nicht. Rot markierte Felder prüfen.','error');render()}})
+ document.addEventListener('keydown',e=>{if(e.key>='1'&&e.key<='9'){enter(Number(e.key));return}if(e.key==='Backspace'||e.key==='Delete'){if(selected>=0&&!puzzle[selected]){$('erase').click()}return}if(selected<0)return;let r=Math.floor(selected/9),c=selected%9;if(e.key==='ArrowUp')r=Math.max(0,r-1);else if(e.key==='ArrowDown')r=Math.min(8,r+1);else if(e.key==='ArrowLeft')c=Math.max(0,c-1);else if(e.key==='ArrowRight')c=Math.min(8,c+1);else return;e.preventDefault();selected=r*9+c;render();boardEl.children[selected].focus()});
+ start();
+})();
+</script>
+</body></html>

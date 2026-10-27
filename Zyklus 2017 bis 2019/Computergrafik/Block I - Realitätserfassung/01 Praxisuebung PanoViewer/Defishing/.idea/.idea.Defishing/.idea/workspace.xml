@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f561d78a-86d9-48d0-8ac7-9cfab624c2a4" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Demo/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+              <folding>
+                <marker date="1533823567233" expanded="false" signature="6:35" ph="..." />
+                <marker date="1533823567233" expanded="true" signature="51:3763" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="80:3761" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="296:2744" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="872:2669" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="944:2654" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="1111:1189" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="1449:1539" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="1698:2015" ph="/* processed.SetPixel((int)(2 * (1 - x) * _radius) + offset, (int)(y * _radius + _center[1]), Color.Blue); ... */" />
+                <marker date="1533823567233" expanded="true" signature="2372:2636" ph="/* processed.SetPixel((int)(2 * (1 - x) * _radius) + offset, (int)(y * _radius + _center[1]), Color.Blue); ... */" />
+                <marker date="1533823567233" expanded="true" signature="2818:3755" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="2939:2996" ph="{...}" />
+                <marker date="1533823567233" expanded="true" signature="3031:3088" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Demo/Program.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ImgCalc/Class1.cs" />
+        <option value="$PROJECT_DIR$/Demo/Program.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-5" />
+    <option name="width" value="1440" />
+    <option name="height" value="765" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Defishing (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Demo/bin/Debug/Demo.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Demo/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Demo/Demo.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.1" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f561d78a-86d9-48d0-8ac7-9cfab624c2a4" name="Default" comment="" />
+      <created>1533798331475</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533798331475</updated>
+      <workItem from="1533798334564" duration="19789000" />
+      <workItem from="1533821064406" duration="6000" />
+      <workItem from="1533821253314" duration="2266000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="22061000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988604" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Demo/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <marker date="1533823567233" expanded="false" signature="6:35" ph="..." />
+            <marker date="1533823567233" expanded="true" signature="51:3763" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="80:3761" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="296:2744" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="872:2669" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="944:2654" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1111:1189" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1449:1539" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1698:2015" ph="/* processed.SetPixel((int)(2 * (1 - x) * _radius) + offset, (int)(y * _radius + _center[1]), Color.Blue); ... */" />
+            <marker date="1533823567233" expanded="true" signature="2372:2636" ph="/* processed.SetPixel((int)(2 * (1 - x) * _radius) + offset, (int)(y * _radius + _center[1]), Color.Blue); ... */" />
+            <marker date="1533823567233" expanded="true" signature="2818:3755" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="2939:2996" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="3031:3088" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImgCalc/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/Demo/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <marker date="1533823567233" expanded="false" signature="6:35" ph="..." />
+            <marker date="1533823567233" expanded="true" signature="51:3763" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="80:3761" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="296:2744" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="872:2669" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="944:2654" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1111:1189" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1449:1539" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1698:2015" ph="/* processed.SetPixel((int)(2 * (1 - x) * _radius) + offset, (int)(y * _radius + _center[1]), Color.Blue); ... */" />
+            <marker date="1533823567233" expanded="true" signature="2372:2636" ph="/* processed.SetPixel((int)(2 * (1 - x) * _radius) + offset, (int)(y * _radius + _center[1]), Color.Blue); ... */" />
+            <marker date="1533823567233" expanded="true" signature="2818:3755" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="2939:2996" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="3031:3088" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImgCalc/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/Demo/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <marker date="1533823567233" expanded="false" signature="6:35" ph="..." />
+            <marker date="1533823567233" expanded="true" signature="51:3763" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="80:3761" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="296:2744" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="872:2669" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="944:2654" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1111:1189" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1449:1539" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="1698:2015" ph="/* processed.SetPixel((int)(2 * (1 - x) * _radius) + offset, (int)(y * _radius + _center[1]), Color.Blue); ... */" />
+            <marker date="1533823567233" expanded="true" signature="2372:2636" ph="/* processed.SetPixel((int)(2 * (1 - x) * _radius) + offset, (int)(y * _radius + _center[1]), Color.Blue); ... */" />
+            <marker date="1533823567233" expanded="true" signature="2818:3755" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="2939:2996" ph="{...}" />
+            <marker date="1533823567233" expanded="true" signature="3031:3088" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

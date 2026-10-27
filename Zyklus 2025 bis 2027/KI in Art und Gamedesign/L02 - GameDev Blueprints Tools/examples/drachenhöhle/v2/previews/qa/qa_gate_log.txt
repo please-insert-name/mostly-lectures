@@ -1,0 +1,18 @@
+00:02.109  blend            | Read blend: "C:\Users\MichaelKröhn\Documents\ClaudeProjekte\GitHub\blender\dragon_cave\dragon_cave.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+BlenderMCP addon registered
+QA PASS Coplanar overlapping faces (z-fighting), gap ≤ 3 mm: 0 pairs
+QA PASS Props intersecting walls / trim / furniture: 0
+QA PASS Text inside negatively scaled (mirrored) instances
+QA PASS Hero camera depth precision (keep clip ratio ≤ 5000, start ≥ 0.1)
+       Hero_Cam_01_Wide: clip 0.1–200 m (ratio 2000)
+       Hero_Cam_02_DragonHead: clip 0.1–200 m (ratio 2000)
+       Hero_Cam_03_TreasureDetail: clip 0.1–200 m (ratio 2000)
+       Hero_Cam_04_LowAngle: clip 0.1–200 m (ratio 2000)
+QA PASS Textures: files present, UV-driven images only on UV-mapped meshes
+QA PASS Lighting setup (world volume vs sun, glass shadows, shadow pool)
+       2 shadow-casting lights, shadow pool 1024 MB
+QA PASS Shots: 4 static hero cameras, separate outputs (stills render at 1920×804, 96 samples)
+QA PASS Render logs free of warnings/errors
+QA SUMMARY: 0 FAIL, 0 WARN, 8 PASS -> previews/qa/qa_report.md
+BlenderMCP addon unregistered

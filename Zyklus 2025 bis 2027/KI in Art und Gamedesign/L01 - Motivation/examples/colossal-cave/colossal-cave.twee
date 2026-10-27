@@ -1,0 +1,1982 @@
+:: StoryData
+{
+  "ifid": "5C0A7E1B-3D2F-4B8A-9E6C-0C01055A1DE0",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start"
+}
+
+:: StoryTitle
+Colossal Cave Adventure
+
+:: StoryInit
+<<run Adv.init()>>
+
+:: Start [nobr]
+<div class="adv-title">COLOSSAL CAVE ADVENTURE</div>
+<p class="adv-sub">Das Kolossale Höhlenabenteuer – eine deutsche Twine-Adaption</p>
+
+<p>Irgendwo in der Nähe liegt die Colossal Cave, wo andere Reichtümer in Schätzen und Gold gefunden haben.
+Es heißt allerdings, dass manche, die sie betreten, nie wieder gesehen werden. Magie soll in der Höhle wirken.
+Ich werde deine Augen und Hände sein.</p>
+
+<p>Du steuerst per Klick auf die Richtungstasten und Gegenstände – oder tippst Befehle mit einem oder zwei Wörtern
+ein (<em>nimm lampe</em>, <em>norden</em>, <em>xyzzy</em> …). Tippe <em>hilfe</em> für Hinweise und <em>info</em> für
+die Spielregeln. Ziel: so viele der 350 Punkte sammeln wie möglich.</p>
+
+<p class="adv-btnrow">[[Das Abenteuer beginnt|Spiel]]</p>
+
+<p class="adv-credit">Vorlage: <em>Adventure</em> (Colossal Cave) von Will Crowther und Don Woods, 1976/77.
+Raum- und Objektstruktur nach der 350-Punkte-Fassung; alle deutschen Texte sind eigene Formulierungen.</p>
+
+
+:: Spiel
+<<run Adv.consume()>><div id="adv-root"></div>
+
+:: R001 [raum]
+Du stehst am Ende einer Straße vor einem kleinen Backsteingebäude. Ringsum ist Wald. Ein kleiner Bach fließt aus dem Gebäude und eine Rinne hinab.
+§§§
+Du stehst wieder am Ende der Straße.
+
+:: R002 [raum]
+Du bist einen Hügel hinaufgestiegen, noch immer im Wald. Auf der anderen Seite fällt die Straße wieder ab. In der Ferne siehst du ein Gebäude.
+§§§
+Du stehst auf dem Hügel an der Straße.
+
+:: R003 [raum]
+Du bist in einem Gebäude, einem Brunnenhaus über einer großen Quelle.
+§§§
+Du bist im Gebäude.
+
+:: R004 [raum]
+Du bist in einem Tal im Wald, neben einem Bach, der über felsiges Bett stürzt.
+§§§
+Du bist im Tal.
+
+:: R005 [raum]
+Du bist im offenen Wald, an einer Seite fällt ein tiefes Tal ab.
+§§§
+Du bist im Wald.
+
+:: R006 [raum]
+Du bist im offenen Wald, nahe bei Tal und Straße.
+§§§
+Du bist im Wald.
+
+:: R007 [raum]
+Zu deinen Füßen stürzt das ganze Wasser des Baches in einen zwei Zoll breiten Schlitz im Fels. Stromabwärts ist das Bachbett kahler Stein.
+§§§
+Du bist am Schlitz im Bachbett.
+
+:: R008 [raum]
+Du stehst in einer sechs Meter breiten Senke mit kahlem Lehmboden. In den Boden ist ein starkes Stahlgitter eingelassen, in Beton gefasst. Ein trockenes Bachbett führt in die Senke.
+§§§
+Du bist vor dem Gitter.
+
+:: R009 [raum]
+Du bist in einer kleinen Kammer unter einem Stahlgitter von drei mal drei Fuß, das zur Oberfläche führt. Ein niedriger Kriechgang über Geröll führt nach Westen ins Innere.
+§§§
+Du bist unter dem Gitter.
+
+:: R010 [raum]
+Du kriechst über Geröll in einem niedrigen Gang. Am östlichen Ende ist ein schwacher Lichtschimmer.
+§§§
+Du bist im Geröllgang.
+
+:: R011 [raum]
+Du bist in einem Schuttraum voller Zeug, das von der Oberfläche hereingespült wurde. Ein niedriger, breiter Gang mit Geröll ist hier von Schlamm und Schutt verstopft, aber eine unbequeme Schlucht führt nach oben und Westen. Ein Zettel an der Wand sagt: "MAGISCHES WORT XYZZY".
+§§§
+Du bist im Schuttraum.
+
+:: R012 [raum]
+Du bist in einer unbequemen, abfallenden Schlucht in Ost-West-Richtung.
+
+:: R013 [raum]
+Du bist in einer prachtvollen Kammer, zehn Meter hoch. Die Wände sind erstarrte Flüsse aus orangefarbenem Stein. Eine unbequeme Schlucht und ein guter Gang führen von der Ost- und der Westseite aus der Kammer.
+§§§
+Du bist in der Vogelkammer.
+
+:: R014 [raum]
+Zu deinen Füßen ist eine kleine Grube, aus der Spuren weißen Nebels aufsteigen. Ein Gang im Osten endet hier, bis auf einen kleinen Spalt, der weiterführt.
+§§§
+Du bist am Rand der kleinen Grube.
+
+:: R015 [raum]
+Du bist an einem Ende einer gewaltigen Halle, die sich nach Westen außer Sichtweite erstreckt. Zu beiden Seiten gibt es Öffnungen. In der Nähe führt eine breite Steintreppe abwärts. Die Halle ist erfüllt von weißen Nebelschwaden, die hin und her wogen, fast als wären sie lebendig.
+
+Ein kalter Wind weht die Treppe herauf. Hinter dir ist ein Gang am oberen Ende einer Kuppel.
+§§§
+Du bist in der Halle der Nebel.
+
+:: R016 [raum]
+Der Spalt ist viel zu klein, als dass du ihm folgen könntest.
+
+:: R017 [raum]
+Du bist am Ostufer einer Kluft, die quer durch die Halle schneidet. Der Nebel ist hier recht dicht, und die Kluft ist zu breit zum Überspringen.
+§§§
+Du bist am Ostufer der Kluft.
+
+:: R018 [raum]
+Dies ist ein niedriger Raum mit einer groben Notiz an der Wand. Sie lautet: "Du kriegst es nicht die Stufen hoch."
+§§§
+Du bist im Raum mit dem Goldklumpen.
+
+:: R019 [raum]
+Du bist in der Halle des Bergkönigs, von der Gänge in alle Richtungen abgehen.
+§§§
+Du bist in der Halle des Bergkönigs.
+
+:: R020 [raum]
+Du liegst am Grund der Grube mit gebrochenem Genick.
+
+:: R021 [raum]
+Du hast es nicht geschafft.
+
+:: R022 [raum]
+Die Kuppel ist nicht zu erklimmen.
+
+:: R023 [raum]
+Du bist am westlichen Ende des Zweigruben-Raums. Über der Grube an diesem Ende der Kammer ist ein großes Loch in der Wand.
+§§§
+Du bist am Westende des Zweigruben-Raums.
+
+:: R024 [raum]
+Du bist am Grund der östlichen Grube im Zweigruben-Raum. In einer Ecke der Grube ist eine kleine Pfütze aus Öl.
+§§§
+Du bist in der Ostgrube.
+
+:: R025 [raum]
+Du bist am Grund der westlichen Grube im Zweigruben-Raum. Etwa acht Meter über dir ist ein großes Loch in der Wand.
+§§§
+Du bist in der Westgrube.
+
+:: R026 [raum]
+Du kletterst an der Pflanze hoch und huschst durch das Loch an ihrer Spitze.
+
+:: R027 [raum]
+Du bist am Westufer der Kluft in der Halle der Nebel.
+§§§
+Du bist am Westufer der Kluft.
+
+:: R028 [raum]
+Du bist in einem niedrigen Nord-Süd-Gang an einem Loch im Boden. Das Loch führt hinunter in einen Ost-West-Gang.
+§§§
+Du bist im niedrigen Nord-Süd-Gang am Loch.
+
+:: R029 [raum]
+Du bist in der Südkammer.
+§§§
+Du bist in der Südkammer.
+
+:: R030 [raum]
+Du bist in der Westkammer der Halle des Bergkönigs. Ein Gang führt hier weiter nach Westen und aufwärts.
+§§§
+Du bist in der Westkammer.
+
+:: R031 [raum]
+
+
+:: R032 [raum]
+Du kommst an der Schlange nicht vorbei.
+
+:: R033 [raum]
+Du bist in einem großen Raum mit einem Gang nach Süden, einem Gang nach Westen und einer Wand aus gebrochenem Fels im Osten. In der Mitte des Raumes steht ein großes "Y2" auf einem Felsen.
+§§§
+Du bist bei "Y2".
+
+:: R034 [raum]
+Du bist in einem Gewirr aus Felsen, überall sind Spalten.
+§§§
+Du bist im Felsgewirr.
+
+:: R035 [raum]
+Du bist an einem niedrigen Fenster, das auf eine riesige Grube hinausgeht, die sich außer Sichtweite nach oben erstreckt. Weit unten, über fünfzehn Meter, ist undeutlich ein Boden zu erkennen. Spuren weißen Nebels bedecken den Boden der Grube und werden nach rechts dichter. Spuren im Staub um das Fenster deuten an, dass vor Kurzem jemand hier war. Genau gegenüber, acht Meter entfernt, ist ein ähnliches Fenster in einen hell erleuchteten Raum. Dort späht eine schattenhafte Gestalt zurück.
+§§§
+Du bist am Fenster zur Grube.
+
+:: R036 [raum]
+Du bist in einem schmutzigen, zerbrochenen Gang. Im Osten ist ein Kriechgang, im Westen ein großer Gang. Über dir ist ein Loch zu einem anderen Gang.
+§§§
+Du bist im schmutzigen Gang.
+
+:: R037 [raum]
+Du stehst am Rand einer kleinen, sauberen, kletterbaren Grube. Ein Kriechgang führt nach Westen.
+§§§
+Du bist am Rand der kleinen Grube.
+
+:: R038 [raum]
+Du bist am Grund einer kleinen Grube mit einem Bächlein, das durch winzige Schlitze ein- und austritt.
+§§§
+Du bist am Grund der kleinen Grube.
+
+:: R039 [raum]
+Du bist in einem großen Raum voller staubiger Felsen. Im Boden ist ein großes Loch. Überall sind Spalten, und ein Gang führt nach Osten.
+§§§
+Du bist im staubigen Felsraum.
+
+:: R040 [raum]
+Du bist durch einen sehr niedrigen, breiten Gang gekrochen, parallel zur Halle der Nebel und nördlich von ihr.
+
+:: R041 [raum]
+Du bist am Westende der Halle der Nebel. Ein niedriger, breiter Kriechgang führt weiter nach Westen, ein weiterer nach Norden. Im Süden ist ein kleiner Gang, zwei Meter über dem Boden.
+§§§
+Du bist am Westende der Halle der Nebel.
+
+:: R042 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R043 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R044 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R045 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R046 [raum]
+Sackgasse.
+
+:: R047 [raum]
+Sackgasse.
+
+:: R048 [raum]
+Sackgasse.
+
+:: R049 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R050 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R051 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R052 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R053 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R054 [raum]
+Sackgasse.
+
+:: R055 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R056 [raum]
+Sackgasse.
+
+:: R057 [raum]
+Du stehst am Rand einer neun Meter tiefen Grube mit einer gewaltigen orangefarbenen Säule an einer Wand. Du könntest hier hinunterklettern, aber nicht wieder hinauf. Das Labyrinth setzt sich auf dieser Ebene fort.
+§§§
+Du bist am Rand der Grube.
+
+:: R058 [raum]
+Sackgasse.
+
+:: R059 [raum]
+Du bist durch einen sehr niedrigen, breiten Gang gekrochen, parallel zur Halle der Nebel und nördlich von ihr.
+
+:: R060 [raum]
+Du bist am Ostende einer sehr langen Halle, die offenbar keine Seitenkammern hat. Im Osten führt ein niedriger, breiter Kriechgang aufwärts. Im Norden führt ein rundes, zwei Fuß breites Loch abwärts.
+§§§
+Du bist am Ostende der Langen Halle.
+
+:: R061 [raum]
+Du bist am Westende einer sehr langen, schmucklosen Halle. Die Halle trifft auf einen schmalen Nord-Süd-Gang.
+§§§
+Du bist am Westende der Langen Halle.
+
+:: R062 [raum]
+Du bist an einer Kreuzung eines hohen Nord-Süd-Gangs mit einem niedrigen Ost-West-Gang.
+§§§
+Du bist an der Kreuzung.
+
+:: R063 [raum]
+Sackgasse.
+
+:: R064 [raum]
+Du bist an einer komplexen Kreuzung. Ein niedriger Gang, in dem man auf Händen und Knien kriecht, kommt von Norden und trifft auf einen höheren Kriechgang von Osten, sodass ein begehbarer Gang nach Westen entsteht. Über dir ist außerdem ein großer Raum. Die Luft ist hier feucht.
+§§§
+Du bist an der Komplexen Kreuzung.
+
+:: R065 [raum]
+Du bist im "Bettdecken", einem langen Ost-West-Gang voller Löcher. Wähle Norden, Süden, hoch oder runter, um zufällig zu erkunden.
+§§§
+Du bist im Bettdeckengang.
+
+:: R066 [raum]
+Du bist in einem Raum, dessen Wände Schweizer Käse ähneln. Offensichtliche Gänge führen nach Westen, Osten, Nordosten und Nordwesten. Ein Teil des Raumes wird von einem großen Felsblock eingenommen.
+§§§
+Du bist im Schweizer-Käse-Raum.
+
+:: R067 [raum]
+Du bist am Ostende des Zweigruben-Raums. Der Boden ist mit dünnen Felsplatten übersät, die den Abstieg in die Gruben leicht machen. Ein Pfad führt an den Gruben vorbei und verbindet die Gänge von Ost und West. Überall sind Löcher, aber das einzige große ist in der Wand genau über der Westgrube, wo du nicht hinkommst.
+§§§
+Du bist am Ostende des Zweigruben-Raums.
+
+:: R068 [raum]
+Du bist in einer großen, niedrigen, runden Kammer, deren Boden eine riesige, von der Decke gefallene Platte ist (Plattenraum). Im Osten und Westen gab es einst große Gänge, die nun von Felsblöcken verstopft sind. Kleine, niedrige Gänge führen nach Norden und Süden, und der südliche biegt bald um die Felsblöcke nach Westen ab.
+§§§
+Du bist im Plattenraum.
+
+:: R069 [raum]
+Du bist in einem geheimen Nord-Süd-Canyon über einem großen Raum.
+§§§
+Du bist im Geheimen Nord-Süd-Canyon über dem großen Raum.
+
+:: R070 [raum]
+Du bist in einem geheimen Nord-Süd-Canyon über einem ansehnlichen Gang.
+
+:: R071 [raum]
+Du bist in einem geheimen Canyon an einer Kreuzung dreier Canyons, die nach Norden, Süden und Südosten führen. Der nördliche ist so hoch wie die beiden anderen zusammen.
+§§§
+Du bist an der Kreuzung dreier geheimer Canyons.
+
+:: R072 [raum]
+Du bist in einem großen, niedrigen Raum. Kriechgänge führen nach Norden, Südosten und Südwesten.
+§§§
+Du bist im Großen Niedrigen Raum.
+
+:: R073 [raum]
+Sackgasse-Kriechgang.
+
+:: R074 [raum]
+Du bist in einem geheimen Canyon, der hier ost-westlich verläuft. Er kreuzt über einen sehr engen Canyon, der fünf Meter tiefer liegt. Wenn du hinuntergehst, kommst du vielleicht nicht wieder hinauf.
+§§§
+Du bist im geheimen Ost-West-Canyon.
+
+:: R075 [raum]
+Du bist an einer breiten Stelle in einem sehr engen Nord-Süd-Canyon.
+
+:: R076 [raum]
+Der Canyon wird hier zu eng, um weiter nach Süden zu gehen.
+
+:: R077 [raum]
+Du bist in einem hohen Ost-West-Canyon. Ein niedriger, enger Kriechgang führt einen Meter nach Norden und scheint sich dann zu öffnen.
+
+:: R078 [raum]
+Der Canyon läuft in eine Masse aus Felsblöcken – Sackgasse.
+
+:: R079 [raum]
+Der Bach fließt durch ein Paar Abwasserrohre von dreißig Zentimetern Durchmesser hinaus. Es wäre ratsam, den Ausgang zu benutzen.
+
+:: R080 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R081 [raum]
+Sackgasse.
+
+:: R082 [raum]
+Sackgasse.
+
+:: R083 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R084 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R085 [raum]
+Sackgasse.
+
+:: R086 [raum]
+Sackgasse.
+
+:: R087 [raum]
+Du befindest dich in einem Labyrinth aus gewundenen kleinen Gängen, die alle gleich aussehen.
+
+:: R088 [raum]
+Du bist in einem langen, schmalen Korridor, der sich nach Westen außer Sicht erstreckt. Am östlichen Ende ist ein Loch, durch das du eine Fülle von Blättern sehen kannst.
+§§§
+Du bist im Schmalen Korridor.
+
+:: R089 [raum]
+Hier gibt es nichts zum Klettern. Benutze "hoch" oder "raus", um die Grube zu verlassen.
+
+:: R090 [raum]
+Du bist die Pflanze hinaufgeklettert und aus der Grube hinaus.
+
+:: R091 [raum]
+Du bist am oberen Ende einer steilen Schräge über einem großen Raum. Du könntest hier hinunterklettern, aber nicht wieder hinauf. Ein Gang führt zurück nach Norden.
+§§§
+Du bist an der steilen Schräge über dem großen Raum.
+
+:: R092 [raum]
+Du bist im Riesenraum. Die Decke ist zu hoch, als dass deine Lampe sie zeigen könnte. Höhlenartige Gänge führen nach Osten, Norden und Süden. An der Westwand steht gekritzelt die Inschrift: "FEE FIE FOE FOO" [sic].
+§§§
+Du bist im Riesenraum.
+
+:: R093 [raum]
+Der Gang ist hier von einem frischen Einsturz versperrt.
+
+:: R094 [raum]
+Du bist an einem Ende eines gewaltigen Nord-Süd-Gangs.
+§§§
+Du bist am Ende des Riesengangs.
+
+:: R095 [raum]
+Du bist in einer großartigen Höhle mit einem rauschenden Bach, der über einen funkelnden Wasserfall in einen tosenden Strudel stürzt, welcher durch ein Loch im Boden verschwindet. Gänge führen nach Süden und Westen.
+§§§
+Du bist in der Wasserfallhöhle.
+
+:: R096 [raum]
+Du bist im Weichen Raum. Die Wände sind mit schweren Vorhängen bedeckt, der Boden mit einem dicken Florteppich. Moos bedeckt die Decke.
+§§§
+Du bist im Weichen Raum.
+
+:: R097 [raum]
+Dies ist der Orientalische Raum. Uralte orientalische Höhlenzeichnungen bedecken die Wände. Ein sanft ansteigender Gang führt nach Norden aufwärts, ein weiterer nach Südosten, und ein Kriechgang auf Händen und Knien führt nach Westen.
+§§§
+Du bist im Orientalischen Raum.
+
+:: R098 [raum]
+Du folgst einem breiten Pfad um den äußeren Rand einer großen Höhle. Weit unten, durch dichten weißen Nebel, sind seltsame Plätschergeräusche zu hören. Der Nebel steigt durch eine Spalte in der Decke auf. Der Pfad führt nach Süden und Westen.
+§§§
+Du bist in der Nebelhöhle.
+
+:: R099 [raum]
+Du bist in einer Nische. Ein kleiner Pfad nach Nordwesten scheint sich nach kurzer Strecke zu weiten. Ein extrem enger Tunnel führt nach Osten. Das sieht nach einer sehr engen Zwängerei aus. Am anderen Ende ist ein unheimliches Licht zu sehen.
+§§§
+Du bist in der Nische.
+
+:: R100 [raum]
+Du bist in einer kleinen Kammer, die in unheimliches grünes Licht getaucht ist. Ein extrem schmaler Tunnel führt nach Westen. Ein dunkler Korridor führt nach Nordosten.
+§§§
+Du bist im Plover-Raum.
+
+:: R101 [raum]
+Du bist im Dunkelraum. Ein Korridor nach Süden ist der einzige Ausgang.
+§§§
+Du bist im Dunkelraum.
+
+:: R102 [raum]
+Du bist in einer Gewölbehalle. Ein Korallengang führte einst von hier aufwärts und nach Osten, ist aber nun von Schutt versperrt. Die Luft riecht nach Meerwasser.
+§§§
+Du bist in der Gewölbehalle.
+
+:: R103 [raum]
+Du bist in einem großen Raum, der aus Sedimentgestein herausgearbeitet ist. Boden und Wände sind übersät mit Muschelstücken, die im Stein eingebettet sind. Ein flacher Gang führt abwärts, ein etwas steilerer aufwärts. Ein niedriger Gang auf Händen und Knien mündet von Süden.
+§§§
+Du bist im Muschelraum.
+
+:: R104 [raum]
+Du bist in einem langen, abfallenden Korridor mit zerklüfteten, scharfen Wänden.
+
+:: R105 [raum]
+Du bist in einer Sackgasse von etwa zweieinhalb Metern Durchmesser.
+
+:: R106 [raum]
+Du bist in einem Vorraum, der zu einem großen Gang im Osten führt. Kleine Gänge führen nach Westen und aufwärts. Die Überreste kürzlicher Grabungen sind unübersehbar. Ein Schild schwebt mitten in der Luft: "HÖHLE IM BAU AB DIESEM PUNKT. BETRETEN AUF EIGENE GEFAHR. [WITT BAUGESELLSCHAFT]"
+§§§
+Du bist im Vorraum.
+
+:: R107 [raum]
+Du bist in einem Labyrinth aus gewundenen kleinen Gängen, die alle verschieden aussehen.
+
+:: R108 [raum]
+Du bist am Ende von Witts Latein. Gänge führen in *alle* Richtungen ab.
+§§§
+Du bist am Ende von Witts Latein.
+
+:: R109 [raum]
+Du bist in einem Nord-Süd-Canyon von etwa acht Metern Breite. Der Boden ist von weißem Nebel bedeckt, der von Norden hereinsickert. Die Wände ragen weit über dreißig Meter in die Höhe. An einem unsichtbaren Punkt hoch über dir hängt ein riesiger, zweiseitiger Spiegel parallel zu den Canyonwänden und genau in der Mitte zwischen ihnen. (Der Spiegel ist offensichtlich für die Zwerge gedacht, die bekanntlich ausgesprochen eitel sind.) In jeder Wand ist, gut fünfzehn Meter oben, ein kleines Fenster zu sehen.
+§§§
+Du bist im Spiegelcanyon.
+
+:: R110 [raum]
+Du bist an einem niedrigen Fenster, das auf eine riesige Grube hinausgeht, die sich außer Sichtweite nach oben erstreckt. Weit unten, über fünfzehn Meter, ist undeutlich ein Boden zu erkennen. Spuren weißen Nebels bedecken den Boden der Grube und werden nach links dichter. Spuren im Staub um das Fenster deuten an, dass vor Kurzem jemand hier war. Genau gegenüber, acht Meter entfernt, ist ein ähnliches Fenster in einen hell erleuchteten Raum. Dort späht eine schattenhafte Gestalt zurück.
+§§§
+Du bist am Fenster zur Grube.
+
+:: R111 [raum]
+Ein großer Stalaktit hängt von der Decke und reicht fast bis zum Boden unten. Du könntest daran hinunterklettern und aus der Höhe auf den Boden springen, aber danach kämst du nicht mehr hinauf.
+§§§
+Du bist an der Spitze des Stalaktiten.
+
+:: R112 [raum]
+Du bist in einem kleinen Labyrinth gewundener Gänge, die alle verschieden aussehen.
+
+:: R113 [raum]
+Du bist am Rand eines großen unterirdischen Reservoirs. Eine undurchsichtige Wolke weißen Nebels erfüllt den Raum und steigt rasch auf. Der See wird von einem Bach gespeist, der aus einem Loch in der Wand etwa drei Meter über dir stürzt und irgendwo im Nebel laut in das Wasser klatscht. Der einzige Gang führt zurück nach Süden.
+§§§
+Du bist am Reservoir.
+
+:: R114 [raum]
+Sackgasse.
+
+:: R115 [raum]
+Du bist am Nordostende eines riesigen Raumes, noch größer als der Riesenraum. Offenbar ist er das Lager des "Abenteuer"-Programms. Gewaltige Fackeln hoch oben tauchen den Raum in rauchiges gelbes Licht. Ringsum sind zu sehen: ein Haufen Flaschen (alle leer), eine Baumschule junger Bohnenranken, die leise murmeln, ein Austernbett, ein Bündel schwarzer Stäbe mit rostigen Sternen an den Enden und eine Sammlung Messinglaternen. Seitlich schlafen sehr viele Zwerge auf dem Boden und schnarchen laut. Ein Schild in der Nähe verkündet: "WECKE DIE ZWERGE NICHT AUF!" Ein gewaltiger Spiegel hängt an einer Wand und erstreckt sich bis ans andere Ende des Raumes, wo in der Ferne verschiedene andere Gegenstände undeutlich zu erkennen sind.
+§§§
+Du bist am Nordostende.
+
+:: R116 [raum]
+Du bist am Südwestende des Lagers. Auf der einen Seite ist eine Grube voller wilder grüner Schlangen. Auf der anderen Seite ist eine Reihe kleiner Weidenkäfige, in denen je ein kleiner, mürrischer Vogel sitzt. In einer Ecke liegt ein Bündel schwarzer Stäbe mit rostigen Zeichen an den Enden. Eine große Zahl Samtkissen liegt verstreut auf dem Boden. Ein gewaltiger Spiegel erstreckt sich nach Nordosten. Zu deinen Füßen ist ein großes Stahlgitter, daneben ein Schild: "SCHATZKAMMER. SCHLÜSSEL IM HAUPTBÜRO."
+§§§
+Du bist am Südwestende.
+
+:: R117 [raum]
+Du bist an einer Seite eines großen, tiefen Abgrunds. Aufsteigender dichter weißer Nebel verwehrt jede Sicht auf die andere Seite. Ein Pfad nach Südwesten führt vom Abgrund weg in einen gewundenen Korridor.
+§§§
+Du bist auf der Südwestseite des Abgrunds.
+
+:: R118 [raum]
+Du bist in einem langen, gewundenen Korridor, der in beide Richtungen außer Sicht abfällt.
+§§§
+Du bist im abfallenden Korridor.
+
+:: R119 [raum]
+Du bist in einem geheimen Canyon, der nach Norden und Osten hinausführt.
+
+:: R120 [raum]
+Du bist in einem geheimen Canyon, der nach Norden und Osten hinausführt.
+
+:: R121 [raum]
+Du bist in einem geheimen Canyon, der nach Norden und Osten hinausführt.
+
+:: R122 [raum]
+Du bist auf der anderen Seite des Abgrunds. Auf dieser Seite führt ein Pfad nach Nordosten vom Abgrund weg.
+§§§
+Du bist auf der Nordostseite des Abgrunds.
+
+:: R123 [raum]
+Du bist in einem langen Ost-West-Korridor. In der Ferne ist ein leises Grollen zu hören.
+§§§
+Du bist im Korridor.
+
+:: R124 [raum]
+Der Pfad gabelt sich hier. Der linke Zweig führt nach Nordosten. Ein dumpfes Grollen scheint in dieser Richtung lauter zu werden. Der rechte Zweig führt nach Südosten eine sanfte Schräge hinab. Der Hauptkorridor kommt von Westen.
+§§§
+Du bist an der Pfadgabelung.
+
+:: R125 [raum]
+Die Wände sind hier ziemlich warm. Von Norden ist ein stetiges Brüllen zu hören, so laut, dass die ganze Höhle zu beben scheint. Ein weiterer Gang führt nach Süden, und ein niedriger Kriechgang nach Osten.
+§§§
+Du bist an der Kreuzung mit den warmen Wänden.
+
+:: R126 [raum]
+Du stehst am Rand einer atemberaubenden Aussicht. Weit unter dir ist ein tätiger Vulkan, aus dem große Fontänen geschmolzener Lava schießen und zurück in die Tiefe stürzen. Das glühende Gestein erfüllt die fernsten Winkel der Höhle mit blutrotem Schein, der allem ein unheimliches, makabres Aussehen verleiht. Die Luft ist voller flackernder Ascheflocken und schwerem Schwefelgeruch. Die Wände sind heiß beim Berühren, und das Donnern des Vulkans übertönt alle anderen Geräusche. In der zerklüfteten Decke weit über dir hängen unzählige verdrehte Gebilde aus reinweißem Alabaster, die das trübe Licht in unheimliche Erscheinungen an den Wänden streuen. Zu einer Seite liegt eine tiefe Schlucht voll bizarren Chaos aus gequältem Fels, das der Teufel höchstpersönlich geformt zu haben scheint. Ein gewaltiger Feuerstrom bricht aus der Tiefe des Vulkans, brennt sich durch die Schlucht und stürzt in einen bodenlosen Schlund weit links von dir. Rechts bricht ein riesiger Geysir sengenden Dampfes unaufhörlich aus einer kahlen Insel inmitten eines schwefligen Sees, der bedrohlich blubbert. Die äußerste rechte Wand glüht in eigenem Feuerschein und verleiht der ohnehin höllischen Szenerie zusätzlichen teuflischen Glanz.
+
+Ein dunkler, unheilvoller Gang führt nach Süden.
+§§§
+Du bist am atemberaubenden Aussichtspunkt.
+
+:: R127 [raum]
+Du bist in einer kleinen Kammer voller großer Felsbrocken. Die Wände sind sehr warm, sodass die Luft im Raum fast erstickend heiß ist. Der einzige Ausgang ist ein Kriechgang nach Westen, aus dem ein tiefes Grollen kommt.
+§§§
+Du bist in der Felsbrockenkammer.
+
+:: R128 [raum]
+Du gehst einen sanft abfallenden Nord-Süd-Gang entlang, der von seltsam geformten Kalksteingebilden gesäumt ist.
+§§§
+Du bist im Kalksteingang.
+
+:: R129 [raum]
+Du stehst am Eingang eines großen, kahlen Raums. Ein Schild über dem Eingang verkündet: "VORSICHT! BÄR IM RAUM!"
+§§§
+Du bist vor dem kahlen Raum.
+
+:: R130 [raum]
+Du bist in einem kahlen Raum. Die Mitte des Raums ist völlig leer bis auf etwas Staub. Spuren im Staub führen zum fernen Ende des Raums. Der einzige Ausgang ist der Weg, auf dem du hereingekommen bist.
+§§§
+Du bist im kahlen Raum.
+
+:: R131 [raum]
+Du bist in einem Labyrinth aus gewundenen kleinen Gängen, die alle verschieden aussehen.
+
+:: R132 [raum]
+Du bist in einem kleinen Labyrinth aus gewundenen Gängen, die alle verschieden aussehen.
+
+:: R133 [raum]
+Du bist in einem gewundenen Labyrinth aus kleinen Gängen, die alle verschieden aussehen.
+
+:: R134 [raum]
+Du bist in einem gewundenen kleinen Labyrinth aus Gängen, die alle verschieden aussehen.
+
+:: R135 [raum]
+Du bist in einem gewundenen kleinen Labyrinth aus Gängen, die ganz verschieden aussehen.
+
+:: R136 [raum]
+Du bist in einem verwinkelten Labyrinth aus kleinen Gängen, die alle verschieden aussehen.
+
+:: R137 [raum]
+Du bist in einem kleinen verwinkelten Labyrinth aus Gängen, die alle verschieden aussehen.
+
+:: R138 [raum]
+Du bist in einem Labyrinth aus kleinen gewundenen Gängen, die alle verschieden aussehen.
+
+:: R139 [raum]
+Du bist in einem Labyrinth aus kleinen verwinkelten Gängen, die alle verschieden aussehen.
+
+:: R140 [raum]
+Sackgasse.
+
+:: Story JavaScript [script]
+window.ADV_DATA = {"travel": {"1": [[2, [2, 44, 29]], [3, [3, 12, 19, 43]], [4, [5, 13, 14, 46, 30]], [5, [6, 45, 43]], [8, [63]]], "2": [[1, [2, 12, 7, 43, 45, 30]], [5, [6, 45, 46]]], "3": [[1, [3, 11, 32, 44]], [11, [62]], [33, [65]], [79, [5, 14]]], "4": [[1, [4, 12, 45]], [5, [6, 43, 44, 29]], [7, [5, 46, 30]], [8, [63]]], "5": [[4, [9, 43, 30]], [50005, [6, 7, 45]], [6, [6, 7, 45]], [5, [44, 46]]], "6": [[1, [2, 45]], [4, [9, 43, 44, 30]], [5, [6, 46]]], "7": [[1, [12]], [4, [4, 45]], [5, [6, 43, 44]], [8, [5, 15, 16, 46]], [595, [60, 14, 30]]], "8": [[5, [6, 43, 44, 46]], [1, [12]], [7, [4, 13, 45]], [303009, [3, 19, 30]], [593, [3, 19, 30]]], "9": [[303008, [11, 29]], [593, [11, 29]], [10, [17, 18, 19, 44]], [14, [31]], [11, [51]]], "10": [[9, [11, 20, 21, 43]], [11, [19, 22, 44, 51]], [14, [31]]], "11": [[303008, [63]], [9, [64]], [10, [17, 18, 23, 24, 43]], [12, [25, 19, 29, 44]], [3, [62]], [14, [31]]], "12": [[303008, [63]], [9, [64]], [11, [30, 43, 51]], [13, [19, 29, 44]], [14, [31]]], "13": [[303008, [63]], [9, [64]], [11, [51]], [12, [25, 43]], [14, [23, 31, 44]]], "14": [[303008, [63]], [9, [64]], [11, [51]], [13, [23, 43]], [150020, [30, 31, 34]], [15, [30, 31, 34]], [16, [33, 44]]], "15": [[18, [36, 46]], [17, [7, 38, 44]], [19, [10, 30, 45]], [150022, [29, 31, 34, 35, 23, 43]], [14, [29, 31, 34, 35, 23, 43]], [34, [55]]], "16": [[14, [1]]], "17": [[15, [38, 43]], [312596, [39]], [412021, [7]], [412597, [41, 42, 44, 69]], [27, [41, 42, 44, 69]]], "18": [[15, [38, 11, 45]]], "19": [[15, [10, 29, 43]], [311028, [45, 36]], [311029, [46, 37]], [311030, [44, 7]], [32, [45]], [35074, [49]], [211032, [49]], [74, [66]]], "20": [[0, [1]]], "21": [[0, [1]]], "22": [[15, [1]]], "23": [[67, [43, 42]], [68, [44, 61]], [25, [30, 31]], [648, [52]]], "24": [[67, [29, 11]]], "25": [[23, [29, 11]], [724031, [56]], [26, [56]]], "26": [[88, [1]]], "27": [[312596, [39]], [412021, [7]], [412597, [41, 42, 43, 69]], [17, [41, 42, 43, 69]], [40, [45]], [41, [44]]], "28": [[19, [38, 11, 46]], [33, [45, 55]], [36, [30, 52]]], "29": [[19, [38, 11, 45]]], "30": [[19, [38, 11, 43]], [62, [44, 29]]], "31": [[524089, [1]], [90, [1]]], "32": [[19, [1]]], "33": [[3, [65]], [28, [46]], [34, [43, 53, 54]], [35, [44]], [159302, [71]], [100, [71]]], "34": [[33, [30, 55]], [15, [29]]], "35": [[33, [43, 55]], [20, [39]]], "36": [[37, [43, 17]], [28, [29, 52]], [39, [44]], [65, [70]]], "37": [[36, [44, 17]], [38, [30, 31, 56]]], "38": [[37, [56, 29, 11]], [595, [60, 14, 30, 4, 5]]], "39": [[36, [43, 23]], [64, [30, 52, 58]], [65, [70]]], "40": [[41, [1]]], "41": [[42, [46, 29, 23, 56]], [27, [43]], [59, [45]], [60, [44, 17]]], "42": [[41, [29]], [42, [45]], [43, [43]], [45, [46]], [80, [44]]], "43": [[42, [44]], [44, [46]], [45, [43]]], "44": [[43, [43]], [48, [30]], [50, [46]], [82, [45]]], "45": [[42, [44]], [43, [45]], [46, [43]], [47, [46]], [87, [29, 30]]], "46": [[45, [44, 11]]], "47": [[45, [43, 11]]], "48": [[44, [29, 11]]], "49": [[50, [43]], [51, [44]]], "50": [[44, [43]], [49, [44]], [51, [30]], [52, [46]]], "51": [[49, [44]], [50, [29]], [52, [43]], [53, [46]]], "52": [[50, [44]], [51, [43]], [52, [46]], [53, [29]], [55, [45]], [86, [30]]], "53": [[51, [44]], [52, [45]], [54, [46]]], "54": [[53, [44, 11]]], "55": [[52, [44]], [55, [45]], [56, [30]], [57, [43]]], "56": [[55, [29, 11]]], "57": [[13, [30, 56]], [55, [44]], [58, [46]], [83, [45]], [84, [43]]], "58": [[57, [43, 11]]], "59": [[27, [1]]], "60": [[41, [43, 29, 17]], [61, [44]], [62, [45, 30, 52]]], "61": [[60, [43]], [62, [45]], [100107, [46]]], "62": [[60, [44]], [63, [45]], [30, [43]], [61, [46]]], "63": [[62, [46, 11]]], "64": [[39, [29, 56, 59]], [65, [44, 70]], [103, [45, 74]], [106, [43]]], "65": [[64, [43]], [66, [44]], [80556, [46]], [68, [61]], [80556, [29]], [50070, [29]], [39, [29]], [60556, [45]], [75072, [45]], [71, [45]], [80556, [30]], [106, [30]]], "66": [[65, [47]], [67, [44]], [80556, [46]], [77, [25]], [96, [43]], [50556, [50]], [97, [72]]], "67": [[66, [43]], [23, [44, 42]], [24, [30, 31]]], "68": [[23, [46]], [69, [29, 56]], [65, [45]]], "69": [[68, [30, 61]], [331120, [46]], [119, [46]], [109, [45]], [113, [75]]], "70": [[71, [45]], [65, [30, 23]], [111, [46]]], "71": [[65, [48]], [70, [46]], [110, [45]]], "72": [[65, [70]], [118, [49]], [73, [45]], [97, [48, 72]]], "73": [[72, [46, 17, 11]]], "74": [[19, [43]], [331120, [44]], [121, [44]], [75, [30]]], "75": [[76, [46]], [77, [45]]], "76": [[75, [45]]], "77": [[75, [43]], [78, [44]], [66, [45, 17]]], "78": [[77, [46]]], "79": [[3, [1]]], "80": [[42, [45]], [80, [44]], [80, [46]], [81, [43]]], "81": [[80, [44, 11]]], "82": [[44, [46, 11]]], "83": [[57, [46]], [84, [43]], [85, [44]]], "84": [[57, [45]], [83, [44]], [114, [50]]], "85": [[83, [43, 11]]], "86": [[52, [29, 11]]], "87": [[45, [29, 30]]], "88": [[25, [30, 56, 43]], [20, [39]], [92, [44, 27]]], "89": [[25, [1]]], "90": [[23, [1]]], "91": [[95, [45, 73, 23]], [72, [30, 56]]], "92": [[88, [46]], [93, [43]], [94, [45]]], "93": [[92, [46, 27, 11]]], "94": [[92, [46, 27, 23]], [309095, [45, 3, 73]], [611, [45, 3, 73]]], "95": [[94, [46, 11]], [92, [27]], [91, [44]]], "96": [[66, [44, 11]]], "97": [[66, [48]], [72, [44, 17]], [98, [29, 45, 73]]], "98": [[97, [46, 72]], [99, [44]]], "99": [[98, [50, 73]], [301, [43, 23]], [100, [43, 23]]], "100": [[301, [44, 23, 11]], [99, [44, 23, 11]], [159302, [71]], [33, [71]], [101, [47, 22]]], "101": [[100, [46, 71, 11]]], "102": [[103, [30, 74, 11]]], "103": [[102, [29, 38]], [104, [30]], [114618, [46]], [115619, [46]], [64, [46]]], "104": [[103, [29, 74]], [105, [30]]], "105": [[104, [29, 11]], [103, [74]]], "106": [[64, [29]], [65, [44]], [108, [43]]], "107": [[131, [46]], [132, [49]], [133, [47]], [134, [48]], [135, [29]], [136, [50]], [137, [43]], [138, [44]], [139, [45]], [61, [30]]], "108": [[95556, [43, 45, 46, 47, 48, 49, 50, 29, 30]], [106, [43, 45, 46, 47, 48, 49, 50, 29, 30]], [626, [44]]], "109": [[69, [46]], [113, [45, 75]]], "110": [[71, [44]], [20, [39]]], "111": [[70, [45]], [40050, [30, 39, 56]], [50053, [30, 39, 56]], [45, [30, 39, 56]]], "112": [[131, [49]], [132, [45]], [133, [43]], [134, [50]], [135, [48]], [136, [47]], [137, [44]], [138, [30]], [139, [29]], [140, [46]]], "113": [[109, [46, 11, 109]]], "114": [[84, [48]]], "115": [[116, [49]]], "116": [[115, [47]], [593, [30]]], "117": [[118, [49]], [233660, [41, 42, 69, 47]], [332661, [41, 42, 69, 47]], [303, [41, 42, 69, 47]], [332021, [39]], [596, [39]]], "118": [[72, [30]], [117, [29]]], "119": [[69, [45, 11]], [653, [43, 7]]], "120": [[69, [45]], [74, [43]]], "121": [[74, [43, 11]], [653, [45, 7]]], "122": [[123, [47]], [233660, [41, 42, 69, 49]], [303, [41, 42, 69, 49]], [596, [39]], [124, [77]], [126, [28]], [129, [40]]], "123": [[122, [44]], [124, [43, 77]], [126, [28]], [129, [40]]], "124": [[123, [44]], [125, [47, 36]], [128, [48, 37, 30]], [126, [28]], [129, [40]]], "125": [[124, [46, 77]], [126, [45, 28]], [127, [43, 17]]], "126": [[125, [46, 23, 11]], [124, [77]], [610, [30, 39]]], "127": [[125, [44, 11, 17]], [124, [77]], [126, [28]]], "128": [[124, [45, 29, 77]], [129, [46, 30, 40]], [126, [28]]], "129": [[128, [44, 29]], [124, [77]], [130, [43, 19, 40, 3]], [126, [28]]], "130": [[129, [44, 11]], [124, [77]], [126, [28]]], "131": [[107, [44]], [132, [48]], [133, [50]], [134, [49]], [135, [47]], [136, [29]], [137, [30]], [138, [45]], [139, [46]], [112, [43]]], "132": [[107, [50]], [131, [29]], [133, [45]], [134, [46]], [135, [44]], [136, [49]], [137, [47]], [138, [43]], [139, [30]], [112, [48]]], "133": [[107, [29]], [131, [30]], [132, [44]], [134, [47]], [135, [49]], [136, [43]], [137, [45]], [138, [50]], [139, [48]], [112, [46]]], "134": [[107, [47]], [131, [45]], [132, [50]], [133, [48]], [135, [43]], [136, [30]], [137, [46]], [138, [29]], [139, [44]], [112, [49]]], "135": [[107, [45]], [131, [48]], [132, [30]], [133, [46]], [134, [43]], [136, [44]], [137, [49]], [138, [47]], [139, [50]], [112, [29]]], "136": [[107, [43]], [131, [44]], [132, [29]], [133, [49]], [134, [30]], [135, [46]], [137, [50]], [138, [48]], [139, [47]], [112, [45]]], "137": [[107, [48]], [131, [47]], [132, [46]], [133, [30]], [134, [29]], [135, [50]], [136, [45]], [138, [49]], [139, [43]], [112, [44]]], "138": [[107, [30]], [131, [43]], [132, [47]], [133, [29]], [134, [44]], [135, [45]], [136, [46]], [137, [48]], [139, [49]], [112, [50]]], "139": [[107, [49]], [131, [50]], [132, [43]], [133, [44]], [134, [45]], [135, [30]], [136, [48]], [137, [29]], [138, [46]], [112, [47]]], "140": [[112, [45, 11]]]}, "vocab": {"road": 2, "hill": 2, "enter": 3, "upstr": 4, "downs": 5, "fores": 6, "forwa": 7, "conti": 7, "onwar": 7, "back": 8, "retur": 8, "retre": 8, "valle": 9, "stair": 10, "out": 11, "outsi": 11, "exit": 11, "leave": 11, "build": 12, "house": 12, "gully": 13, "strea": 14, "rock": 15, "bed": 16, "crawl": 17, "cobbl": 18, "inwar": 19, "insid": 19, "in": 19, "surfa": 20, "null": 21, "nowhe": 21, "dark": 22, "passa": 23, "tunne": 23, "low": 24, "canyo": 25, "awkwa": 26, "giant": 27, "view": 28, "upwar": 29, "up": 29, "u": 29, "above": 29, "ascen": 29, "d": 30, "downw": 30, "down": 30, "desce": 30, "pit": 31, "outdo": 32, "crack": 33, "steps": 34, "dome": 35, "left": 36, "right": 37, "hall": 38, "jump": 39, "barre": 40, "over": 41, "acros": 42, "east": 43, "e": 43, "west": 44, "w": 44, "north": 45, "n": 45, "south": 46, "s": 46, "ne": 47, "se": 48, "sw": 49, "nw": 50, "debri": 51, "hole": 52, "wall": 53, "broke": 54, "y2": 55, "climb": 56, "look": 57, "exami": 57, "touch": 57, "descr": 57, "floor": 58, "room": 59, "slit": 60, "slab": 61, "slabr": 61, "xyzzy": 62, "depre": 63, "entra": 64, "plugh": 65, "secre": 66, "cave": 67, "cross": 69, "bedqu": 70, "plove": 71, "orien": 72, "caver": 73, "shell": 74, "reser": 75, "main": 76, "offic": 76, "fork": 77, "keys": 1001, "key": 1001, "lamp": 1002, "headl": 1002, "lante": 1002, "grate": 1003, "cage": 1004, "rod": 1005, "bird": 1008, "door": 1009, "pillo": 1010, "velve": 1010, "snake": 1011, "fissu": 1012, "table": 1013, "clam": 1014, "oyste": 1015, "magaz": 1016, "issue": 1016, "spelu": 1016, "spel": 1016, "dwarf": 1017, "dwarv": 1017, "knife": 1018, "knive": 1018, "food": 1019, "ratio": 1019, "bottl": 1020, "jar": 1020, "water": 1021, "h2o": 1021, "oil": 1022, "mirro": 1023, "plant": 1024, "beans": 1024, "stala": 1026, "shado": 1027, "figur": 1027, "axe": 1028, "drawi": 1029, "pirat": 1030, "drago": 1031, "chasm": 1032, "troll": 1033, "bear": 1035, "messa": 1036, "volca": 1037, "geyse": 1037, "machi": 1038, "vendi": 1038, "batte": 1039, "carpe": 1040, "moss": 1040, "gold": 1050, "nugge": 1050, "diamo": 1051, "silve": 1052, "bars": 1052, "jewel": 1053, "coins": 1054, "chest": 1055, "box": 1055, "treas": 1055, "eggs": 1056, "egg": 1056, "nest": 1056, "tride": 1057, "vase": 1058, "ming": 1058, "shard": 1058, "potte": 1058, "emera": 1059, "plati": 1060, "pyram": 1060, "pearl": 1061, "rug": 1062, "persi": 1062, "spice": 1063, "chain": 1064, "carry": 2001, "take": 2001, "keep": 2001, "catch": 2001, "steal": 2001, "captu": 2001, "get": 2001, "tote": 2001, "drop": 2002, "relea": 2002, "free": 2002, "disca": 2002, "dump": 2002, "say": 2003, "chant": 2003, "sing": 2003, "utter": 2003, "mumbl": 2003, "unloc": 2004, "open": 2004, "nothi": 2005, "lock": 2006, "close": 2006, "light": 2007, "on": 2007, "extin": 2008, "off": 2008, "wave": 2009, "shake": 2009, "swing": 2009, "calm": 2010, "placa": 2010, "tame": 2010, "walk": 2011, "run": 2011, "trave": 2011, "go": 2011, "proce": 2011, "explo": 2011, "goto": 2011, "follo": 2011, "turn": 2011, "attac": 2012, "kill": 2012, "fight": 2012, "hit": 2012, "strik": 2012, "pour": 2013, "eat": 2014, "devou": 2014, "drink": 2015, "rub": 2016, "throw": 2017, "toss": 2017, "quit": 2018, "find": 2019, "where": 2019, "inven": 2020, "feed": 2021, "fill": 2022, "blast": 2023, "deton": 2023, "ignit": 2023, "blowu": 2023, "score": 2024, "fee": 2025, "fie": 2025, "foe": 2025, "foo": 2025, "fum": 2025, "brief": 2026, "read": 2027, "perus": 2027, "break": 2028, "shatt": 2028, "smash": 2028, "wake": 2029, "distu": 2029, "suspe": 2030, "pause": 2030, "save": 2030, "hours": 2031, "sesam": 3050, "opens": 3050, "abra": 3050, "abrac": 3050, "shaza": 3050, "hocus": 3050, "pocus": 3050, "help": 3051, "?": 3051, "tree": 3064, "trees": 3064, "dig": 3066, "excav": 3066, "lost": 3068, "mist": 3069, "fuck": 3079, "stop": 3139, "info": 3142, "infor": 3142, "swim": 3147, "osten": 43, "ost": 43, "o": 43, "westen": 44, "norden": 45, "nord": 45, "sueden": 46, "sued": 46, "nordost": 47, "no": 47, "suedost": 48, "so": 48, "suedwest": 49, "nordwest": 50, "hoch": 29, "hinauf": 29, "rauf": 29, "oben": 29, "aufwaerts": 29, "auf": 29, "aufsteigen": 29, "nachoben": 29, "runter": 30, "hinunter": 30, "hinab": 30, "unten": 30, "abwaerts": 30, "ab": 30, "absteigen": 30, "herunter": 30, "rein": 19, "hinein": 19, "hineingehen": 19, "drinnen": 19, "innen": 19, "ins": 19, "raus": 11, "hinaus": 11, "aus": 11, "ausgang": 11, "verlassen": 11, "verlass": 11, "betreten": 3, "eintreten": 3, "eingang": 3, "strasse": 2, "weg": 2, "huegel": 2, "stromauf": 4, "flussaufwaerts": 4, "bachaufwaerts": 4, "stromab": 5, "flussabwaerts": 5, "bachabwaerts": 5, "wald": 6, "vorwaerts": 7, "weiter": 7, "geradeaus": 7, "zurueck": 8, "zurueckgehen": 8, "tal": 9, "treppe": 10, "gebaeude": 12, "haus": 12, "rinne": 13, "bach": 14, "fluss": 14, "fels": 15, "felsen": 15, "stein": 15, "bett": 16, "bachbett": 16, "kriechen": 17, "kriechgang": 17, "kraxeln": 17, "geroell": 18, "oberflaeche": 20, "nirgends": 21, "nichts": 21, "dunkel": 22, "dunkelheit": 22, "gang": 23, "tunnel": 23, "durchgang": 23, "niedrig": 24, "schlucht": 25, "canyon": 25, "unbequem": 26, "riese": 27, "riesig": 27, "aussicht": 28, "blick": 28, "grube": 31, "draussen": 32, "spalt": 33, "ritze": 33, "stufen": 34, "kuppel": 35, "dom": 35, "links": 36, "rechts": 37, "halle": 38, "springen": 39, "spring": 39, "huepfen": 39, "oede": 40, "kahl": 40, "hinueber": 41, "ueber": 41, "ueberqueren": 42, "queren": 42, "schutt": 51, "loch": 52, "wand": 53, "gebrochen": 54, "klettern": 56, "klettere": 56, "kletter": 56, "erklimme": 56, "schau": 57, "schaue": 57, "schauen": 57, "sieh": 57, "sehen": 57, "untersuche": 57, "untersuchen": 57, "betrachte": 57, "umschauen": 57, "l": 57, "boden": 58, "raum": 59, "schlitz": 60, "platte": 61, "plattenraum": 61, "senke": 63, "geheim": 66, "hoehle": 67, "kreuzen": 69, "bettdecke": 70, "bettdeckengang": 70, "orientalisch": 72, "kaverne": 73, "muschelraum": 74, "reservoir": 75, "hauptbuero": 76, "buero": 76, "gabelung": 77, "schluessel": 1001, "schluesselbund": 1001, "lampe": 1002, "laterne": 1002, "licht": 1002, "gitter": 1003, "tor": 1003, "gitterrost": 1003, "kaefig": 1004, "stab": 1005, "rute": 1005, "stock": 1005, "vogel": 1008, "tuer": 1009, "tuere": 1009, "kissen": 1010, "samtkissen": 1010, "schlange": 1011, "kluft": 1012, "spalte": 1012, "riss": 1012, "tafel": 1013, "steintafel": 1013, "muschel": 1014, "riesenmuschel": 1014, "auster": 1015, "riesenauster": 1015, "zeitschrift": 1016, "magazin": 1016, "heft": 1016, "zwerg": 1017, "zwerge": 1017, "messer": 1018, "essen": 1019, "proviant": 1019, "nahrung": 1019, "futter": 1019, "flasche": 1020, "wasser": 1021, "oel": 1022, "spiegel": 1023, "pflanze": 1024, "bohne": 1024, "bohnen": 1024, "ranke": 1024, "bohnenranke": 1024, "stalaktit": 1026, "gestalt": 1027, "schatten": 1027, "axt": 1028, "beil": 1028, "zeichnungen": 1029, "zeichnung": 1029, "drache": 1031, "drachen": 1031, "abgrund": 1032, "schlund": 1032, "baer": 1035, "nachricht": 1036, "botschaft": 1036, "vulkan": 1037, "geysir": 1037, "automat": 1038, "verkaufsautomat": 1038, "batterien": 1039, "batterie": 1039, "akku": 1039, "moos": 1040, "vorhang": 1040, "vorhaenge": 1040, "goldklumpen": 1050, "klumpen": 1050, "nugget": 1050, "diamanten": 1051, "diamant": 1051, "silber": 1052, "silberbarren": 1052, "schmuck": 1053, "juwelen": 1053, "muenzen": 1054, "geld": 1054, "truhe": 1055, "kiste": 1055, "schatztruhe": 1055, "eier": 1056, "ei": 1056, "dreizack": 1057, "smaragd": 1059, "pyramide": 1060, "platinpyramide": 1060, "perle": 1061, "teppich": 1062, "perserteppich": 1062, "gewuerze": 1063, "kette": 1064, "goldkette": 1064, "nimm": 2001, "nehme": 2001, "nehmen": 2001, "nimmt": 2001, "hol": 2001, "fang": 2001, "fange": 2001, "fangen": 2001, "stiehl": 2001, "hebe": 2001, "heb": 2001, "aufheben": 2001, "lass": 2002, "lasse": 2002, "lege": 2002, "leg": 2002, "ablegen": 2002, "fallenlassen": 2002, "weglegen": 2002, "entlasse": 2002, "sage": 2003, "sag": 2003, "sprich": 2003, "sprecher": 2003, "rufe": 2003, "ruf": 2003, "singe": 2003, "oeffne": 2004, "oeffnen": 2004, "aufschliessen": 2004, "schliesseauf": 2004, "entriegle": 2004, "aufsperren": 2004, "schliesse": 2006, "schliessen": 2006, "verschliesse": 2006, "zusperren": 2006, "zumachen": 2006, "abschliessen": 2006, "sperre": 2006, "anzuenden": 2007, "zuende": 2007, "entzuende": 2007, "anmachen": 2007, "einschalten": 2007, "schaltean": 2007, "loesche": 2008, "ausmachen": 2008, "ausschalten": 2008, "ausloeschen": 2008, "schwenke": 2009, "schwenken": 2009, "schwinge": 2009, "winke": 2009, "winken": 2009, "schuettle": 2009, "beruhige": 2010, "zaehme": 2010, "gehe": 2011, "geh": 2011, "laufe": 2011, "lauf": 2011, "renne": 2011, "folge": 2011, "folgen": 2011, "attackiere": 2012, "angreifen": 2012, "greife": 2012, "greif": 2012, "greifen": 2012, "toete": 2012, "toeten": 2012, "kaempfe": 2012, "schlage": 2012, "schlag": 2012, "erschlage": 2012, "haue": 2012, "hau": 2012, "ermorde": 2012, "giesse": 2013, "giessen": 2013, "schuette": 2013, "leere": 2013, "iss": 2014, "esse": 2014, "verschlinge": 2014, "trinke": 2015, "trink": 2015, "trinken": 2015, "saufe": 2015, "reibe": 2016, "reib": 2016, "polier": 2016, "poliere": 2016, "wirf": 2017, "werfe": 2017, "schleudere": 2017, "schmeiss": 2017, "ende": 2018, "beenden": 2018, "aufgeben": 2018, "finde": 2019, "finden": 2019, "suche": 2019, "wo": 2019, "inventar": 2020, "i": 2020, "inv": 2020, "fuettere": 2021, "fuettern": 2021, "fuelle": 2022, "befuelle": 2022, "fuellen": 2022, "sprenge": 2023, "sprengen": 2023, "explodiere": 2023, "zuendesprengen": 2023, "punkte": 2024, "punktestand": 2024, "kurz": 2026, "lies": 2027, "lese": 2027, "lesen": 2027, "zerbrich": 2028, "zerbreche": 2028, "zerschlage": 2028, "zertruemmere": 2028, "zerstoere": 2028, "wecke": 2029, "wecken": 2029, "stoere": 2029, "speichern": 2030, "oeffnungszeiten": 2031, "stunden": 2031, "hilfe": 3051, "hilf": 3051, "baum": 3064, "baeume": 3064, "grabe": 3066, "graben": 3066, "schwimme": 3147, "schwimmen": 3147, "verloren": 3068, "nebel": 3069, "dunst": 3069, "stopp": 3139}, "place0": {"1": [3, 0], "2": [3, 0], "3": [8, 9], "4": [10, 0], "5": [11, 0], "6": [0, 0], "7": [14, 15], "8": [13, 0], "9": [94, -1], "10": [96, 0], "11": [19, -1], "12": [17, 27], "13": [101, -1], "14": [103, 0], "15": [0, 0], "16": [106, 0], "17": [0, -1], "18": [0, 0], "19": [3, 0], "20": [3, 0], "21": [0, 0], "22": [0, 0], "23": [109, -1], "24": [25, -1], "25": [23, 67], "26": [111, -1], "27": [35, 110], "28": [0, 0], "29": [97, -1], "30": [0, -1], "31": [119, 121], "32": [117, 122], "33": [117, 122], "34": [0, 0], "35": [130, -1], "36": [0, -1], "37": [126, -1], "38": [140, -1], "39": [0, 0], "40": [96, -1], "50": [18, 0], "51": [27, 0], "52": [28, 0], "53": [29, 0], "54": [30, 0], "55": [0, 0], "56": [92, 0], "57": [95, 0], "58": [97, 0], "59": [100, 0], "60": [101, 0], "61": [0, 0], "62": [119, 121], "63": [127, 0], "64": [130, -1]}, "light": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 115, 116, 126], "oilrooms": [24], "liquid": [1, 3, 4, 7, 38, 95, 113, 24], "nopirate": [46, 47, 48, 54, 56, 58, 82, 85, 86, 122, 123, 124, 125, 126, 127, 128, 129, 130], "hintrooms": {"4": [8], "5": [13], "6": [19], "7": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 80, 81, 82, 86, 87], "8": [99, 100, 101], "9": [108]}, "hints": [[2, 9999, 10, 0, 0], [3, 9999, 5, 0, 0], [4, 4, 2, 62, 63], [5, 5, 2, 18, 19], [6, 8, 2, 20, 21], [7, 75, 4, 176, 177], [8, 25, 5, 178, 179], [9, 20, 3, 180, 181]], "msg": {"1": "Irgendwo in der Nähe liegt die Colossal Cave, wo andere Reichtümer in Schätzen und Gold gefunden haben. Es heißt allerdings, dass manche, die sie betreten, nie wieder gesehen werden. Magie soll in der Höhle wirken. Ich werde deine Augen und Hände sein. Gib mir Anweisungen mit einem oder zwei Wörtern.\n\n(Wenn du nicht weiterkommst, tippe \"hilfe\" für ein paar allgemeine Hinweise. Informationen darüber, wie du dein Abenteuer beenden kannst, bekommst du mit \"info\".)", "2": "Ein kleiner Zwerg mit einem großen Messer versperrt dir den Weg.", "3": "Ein kleiner Zwerg ist gerade um eine Ecke gekommen, hat dich gesehen, eine kleine Axt nach dir geworfen, die danebenging, hat geflucht und ist weggerannt.", "4": "In diesem Raum ist ein bedrohlicher kleiner Zwerg bei dir!", "5": "Ein scharfes, gemeines Messer wird nach dir geworfen!", "6": "Keines davon trifft dich!", "7": "Eines davon trifft dich!", "8": "Eine hohle Stimme sagt \"PLUGH\".", "9": "In diese Richtung gibt es keinen Weg.", "10": "Ich bin nicht sicher, wie du stehst. Benutze Himmelsrichtungen oder nahe Gegenstände.", "11": "Ich weiß nicht, was hier \"rein\" oder \"raus\" ist. Benutze Himmelsrichtungen oder nenne etwas in der gewünschten Richtung.", "12": "Ich weiß nicht, wie ich dieses Wort hier anwenden soll.", "13": "Das verstehe ich nicht!", "14": "Ich bin dabei. Würdest du erklären, wie?", "15": "Tut mir leid, ich darf nicht mehr Einzelheiten nennen. Ich wiederhole die lange Beschreibung deines Standorts.", "16": "Es ist jetzt stockdunkel. Wenn du weitergehst, fällst du wahrscheinlich in eine Grube.", "17": "Wenn du möchtest, tippe einfach w statt westen.", "18": "Versuchst du, den Vogel zu fangen?", "19": "Der Vogel ist im Moment verängstigt, und du kannst ihn nicht fangen, egal was du versuchst. Vielleicht später.", "20": "Versuchst du irgendwie, mit der Schlange fertig zu werden?", "21": "Du kannst die Schlange nicht töten, nicht vertreiben und auch nicht umgehen oder dergleichen. Es gibt einen Weg vorbei, aber du hast im Moment nicht die nötigen Mittel.", "22": "Willst du jetzt wirklich aufgeben?", "23": "Du bist in eine Grube gefallen und hast dir jeden Knochen im Leib gebrochen!", "24": "Du trägst es bereits!", "25": "Das kann nicht dein Ernst sein!", "26": "Der Vogel war furchtlos, als du hereinkamst, aber als du dich näherst, wird er unruhig, und du kannst ihn nicht fangen.", "27": "Du kannst den Vogel fangen, aber nicht tragen.", "28": "Hier ist nichts mit einem Schloss!", "29": "Du trägst es nicht!", "30": "Der kleine Vogel greift die grüne Schlange an und treibt sie in einem erstaunlichen Wirbel davon.", "31": "Du hast keine Schlüssel!", "32": "Es hat kein Schloss.", "33": "Ich weiß nicht, wie man so etwas auf- oder zuschließt.", "34": "Es war schon verschlossen.", "35": "Das Gitter ist jetzt verschlossen.", "36": "Das Gitter ist jetzt aufgeschlossen.", "37": "Es war schon aufgeschlossen.", "38": "Du hast keine Lichtquelle.", "39": "Deine Lampe ist jetzt an.", "40": "Deine Lampe ist jetzt aus.", "41": "Es gibt keine Möglichkeit, am Bären vorbeizukommen und die Kette aufzuschließen, was wahrscheinlich auch besser so ist.", "42": "Nichts geschieht.", "43": "Wo?", "44": "Hier gibt es nichts anzugreifen.", "45": "Der kleine Vogel ist jetzt tot. Sein Körper verschwindet.", "46": "Die Schlange anzugreifen funktioniert nicht und ist sehr gefährlich.", "47": "Du hast einen kleinen Zwerg getötet.", "48": "Du greifst einen kleinen Zwerg an, aber er weicht aus.", "49": "Womit? Mit bloßen Händen?", "50": "Netter Versuch, aber das ist ein altes, abgenutztes magisches Wort.", "51": "Ich kenne Orte, Handlungen und Dinge. Der größte Teil meines Wortschatzes beschreibt Orte und dient dazu, dich dorthin zu bewegen. Versuche zum Bewegen Wörter wie Wald, Gebäude, stromab, betreten, Osten, Westen, Norden, Süden, hoch oder runter. Ich kenne ein paar besondere Gegenstände, etwa einen schwarzen Stab, der irgendwo in der Höhle versteckt ist. Diese Gegenstände lassen sich mit einigen meiner Handlungswörter handhaben. Meistens musst du Gegenstand und Handlung nennen (in beliebiger Reihenfolge), aber manchmal kann ich den Gegenstand aus dem Verb erschließen. Manche Gegenstände haben Nebenwirkungen; zum Beispiel erschreckt der Stab den Vogel. Meistens müssen Leute, die sich nicht bewegen können, nur ein paar andere Wörter versuchen. Meistens versuchen Leute, die erfolglos einen Gegenstand handhaben wollen, etwas, das über ihre (oder meine!) Möglichkeiten geht, und sollten es ganz anders angehen. Um das Spiel zu beschleunigen, kannst du manchmal mit einem einzigen Wort weite Strecken zurücklegen. Zum Beispiel bringt dich \"gebäude\" meist von überall über der Erde zum Gebäude, außer wenn du dich im Wald verirrt hast. Beachte auch, dass Höhlengänge oft Kurven machen und dass das Verlassen eines Raumes nach Norden nicht garantiert, dass du den nächsten von Süden betrittst.\n\nViel Glück!\n\n(Du kannst auch die Richtungstasten benutzen und Gegenstände anklicken.)", "52": "Es verfehlt!", "53": "Es trifft dich!", "54": "OK", "55": "Du kannst die Schlüssel nicht aufschließen.", "56": "Du bist ein bisschen in kleinen Löchern herumgekrochen und wieder im Hauptgang gelandet.", "57": "Ich weiß nicht, wo die Höhle ist, aber hier in der Gegend kann kein Bach lange an der Oberfläche fließen. Ich würde es mit dem Bach versuchen.", "58": "Dazu brauche ich genauere Anweisungen.", "59": "Ich kann dir nur sagen, was du siehst, während du dich bewegst und Dinge handhabst. Ich kann dir nicht sagen, wo entfernte Dinge sind.", "60": "Dieses Wort kenne ich nicht.", "61": "Was?", "62": "Versuchst du, in die Höhle zu gelangen?", "63": "Das Gitter ist sehr massiv und hat ein gehärtetes Stahlschloss. Du kannst nicht ohne Schlüssel hinein, und hier in der Nähe sind keine Schlüssel. Ich würde empfehlen, die Schlüssel woanders zu suchen.", "64": "Die Bäume des Waldes sind große Harteichen und Ahorne mit gelegentlichen Kiefern- und Fichtenhainen. Es gibt recht viel Unterholz, hauptsächlich Birken- und Eschenschösslinge sowie unscheinbare Büsche verschiedener Art. Zu dieser Jahreszeit ist die Sicht durch all das Laub stark eingeschränkt, aber das Vorankommen ist leicht, wenn man um Fichten und Beerensträucher herumgeht.", "65": "Willkommen bei ADVENTURE!! Möchtest du Anweisungen?", "66": "Ohne Schaufel zu graben ist ziemlich unpraktisch. Selbst mit einer Schaufel ist ein Fortschritt unwahrscheinlich.", "67": "Sprengen erfordert Dynamit.", "68": "Ich bin genauso verwirrt wie du.", "69": "Nebel ist ein weißer Dunst, meist Wasser, der von Zeit zu Zeit in Höhlen zu sehen ist. Er kann überall auftreten, ist aber oft ein Zeichen für eine tiefe Grube, die hinunter zu Wasser führt.", "70": "Deine Füße sind jetzt nass.", "71": "Ich glaube, mir ist gerade der Appetit vergangen.", "72": "Danke, es war köstlich!", "73": "Du hast einen Schluck aus dem Bach genommen. Das Wasser schmeckt stark nach Mineralien, ist aber nicht unangenehm. Es ist extrem kalt.", "74": "Die Wasserflasche ist jetzt leer.", "75": "Die Lampe zu reiben ist nicht besonders lohnend. Jedenfalls geschieht nichts Aufregendes.", "76": "Seltsam. Nichts Unerwartetes geschieht.", "77": "Deine Flasche ist leer und der Boden nass.", "78": "Das kannst du nicht ausgießen.", "79": "Pass auf!", "80": "Welchen Weg?", "81": "Oh weh, du scheinst dich selbst umgebracht zu haben. Ich könnte dir vielleicht helfen, aber ich habe das noch nie wirklich getan. Soll ich versuchen, dich wiederzubeleben?", "82": "In Ordnung. Aber gib mir nicht die Schuld, wenn etwas schiefgeht ...\n\n--- PUFF!! ---\n\nDu wirst von einer Wolke aus orangefarbenem Rauch umhüllt. Hustend und keuchend tauchst du aus dem Rauch auf und findest ...", "83": "Du ungeschickter Trottel, du hast es schon wieder getan! Ich weiß nicht, wie lange ich das noch durchhalte. Soll ich versuchen, dich noch einmal wiederzubeleben?", "84": "Okay, wo habe ich nur meinen orangefarbenen Rauch hingetan? ... >PUFF!<\n\nAlles verschwindet in einer dichten Wolke orangefarbenen Rauchs.", "85": "Jetzt hast du es wirklich getan! Mein orangefarbener Rauch ist alle! Du erwartest doch nicht, dass ich ohne ihn eine anständige Wiederbelebung hinbekomme, oder?", "86": "Okay, wenn du so schlau bist, mach es doch selbst! Ich gehe!", "91": "Tut mir leid, aber ich scheine mich nicht mehr zu erinnern, wie du hierhergekommen bist.", "92": "Du kannst nichts mehr tragen. Du musst zuerst etwas ablegen.", "93": "Du kannst nicht durch ein verschlossenes Stahlgitter gehen!", "94": "Ich glaube, was du willst, ist genau hier bei dir.", "95": "Du passt nicht durch einen fünf Zentimeter breiten Schlitz!", "96": "Ich schlage respektvoll vor, dass du über die Brücke gehst, statt zu springen.", "97": "Es gibt keinen Weg über die Kluft.", "98": "Du trägst nichts bei dir.", "99": "Du trägst derzeit Folgendes:", "100": "Es hat keinen Hunger (es sehnt sich bloß nach den Fjorden). Außerdem hast du kein Vogelfutter.", "101": "Die Schlange hat jetzt deinen Vogel verschlungen.", "102": "Hier gibt es nichts, was es fressen will (außer vielleicht dich).", "103": "Du Narr, Zwerge fressen nur Kohle! Jetzt hast du ihn *richtig* wütend gemacht!!", "104": "Du hast nichts, worin du es tragen könntest.", "105": "Deine Flasche ist schon voll.", "106": "Hier gibt es nichts, womit du die Flasche füllen könntest.", "107": "Deine Flasche ist jetzt voll Wasser.", "108": "Deine Flasche ist jetzt voll Öl.", "109": "Das kannst du nicht füllen.", "110": "Sei nicht lächerlich!", "111": "Die Tür ist extrem rostig und weigert sich, sich zu öffnen.", "112": "Die Pflanze schüttelt empört das Öl von ihren Blättern und fragt: \"Wasser?\"", "113": "Die Scharniere sind inzwischen gründlich verrostet und rühren sich nicht.", "114": "Das Öl hat die Scharniere gelöst, sodass sich die Tür nun bewegen lässt, wenn auch nur mit Mühe.", "115": "Die Pflanze hat außergewöhnlich tiefe Wurzeln und lässt sich nicht herausziehen.", "116": "Die Messer der Zwerge verschwinden, sobald sie auf die Höhlenwände treffen.", "117": "Etwas, das du trägst, passt nicht mit dir durch den Tunnel. Du solltest Inventur machen und etwas ablegen.", "118": "Du kannst diese anderthalb Meter große Muschel nicht durch den kleinen Gang bekommen!", "119": "Du kannst diese anderthalb Meter große Auster nicht durch den kleinen Gang bekommen!", "120": "Ich rate dir, die Muschel hinzulegen, bevor du sie öffnest. >ÄCHZ!<", "121": "Ich rate dir, die Auster hinzulegen, bevor du sie öffnest. >STÖHN!<", "122": "Du hast nichts, was stark genug wäre, die Muschel zu öffnen.", "123": "Du hast nichts, was stark genug wäre, die Auster zu öffnen.", "124": "Eine schimmernde Perle fällt aus der Muschel und rollt davon. Du meine Güte, das muss in Wirklichkeit eine Auster sein. (Ich war nie gut darin, Muscheltiere zu bestimmen.) Was immer es ist, es hat sich jetzt wieder fest geschlossen.", "125": "Die Auster knarzt auf und enthüllt nichts als Auster. Sofort schnappt sie wieder zu.", "126": "Du bist ein bisschen in kleinen Löchern herumgekrochen und hast deinen Weg von einem kürzlichen Einsturz versperrt gefunden. Du bist jetzt wieder im Hauptgang.", "127": "Aus der Dunkelheit hinter dir sind schwache Raschelgeräusche zu hören.", "128": "Aus den Schatten hinter dir springt ein bärtiger Pirat! \"Har, har\", lacht er, \"ich nehme einfach all diese Beute und verstecke sie mit meiner Truhe tief im Labyrinth!\" Er schnappt sich deinen Schatz und verschwindet in der Düsternis.", "129": "Eine grabesartige Stimme, die durch die Höhle hallt, sagt: \"HÖHLE SCHLIESST BALD. ALLE ABENTEURER VERLASSEN SIE SOFORT ÜBER DAS HAUPTBÜRO.\"", "130": "Eine geheimnisvolle aufgezeichnete Stimme erwacht stöhnend zum Leben und verkündet: \"DIESER AUSGANG IST GESCHLOSSEN. BITTE VERLASSEN SIE DIE HÖHLE ÜBER DAS HAUPTBÜRO.\"", "131": "Es sieht aus, als wärst du tot. Nun, da es ohnehin so kurz vor Feierabend ist, machen wir für heute Schluss.", "132": "Die grabesartige Stimme verkündet: \"DIE HÖHLE IST NUN GESCHLOSSEN.\" Während die Echos verhallen, gibt es einen blendenden Lichtblitz (und eine kleine Wolke orangefarbenen Rauchs) ... Als sich deine Augen wieder scharfstellen, siehst du dich um und findest ...", "133": "Es gibt eine laute Explosion, und ein sechs Meter großes Loch erscheint in der gegenüberliegenden Wand und begräbt die Zwerge unter dem Geröll. Du marschierst durch das Loch und findest dich im Hauptbüro wieder, wo eine jubelnde Schar freundlicher Elfen den siegreichen Abenteurer in den Sonnenuntergang trägt.", "134": "Es gibt eine laute Explosion, und ein sechs Meter großes Loch erscheint in der gegenüberliegenden Wand und begräbt die Schlangen unter dem Geröll. Ein Strom geschmolzener Lava ergießt sich durch das Loch und zerstört alles auf seinem Weg, dich eingeschlossen!", "135": "Es gibt eine laute Explosion, und du wirst plötzlich über die Wände des Raumes verspritzt.", "136": "Der entstandene Radau hat die Zwerge geweckt. Nun sind mehrere bedrohliche kleine Zwerge bei dir im Raum! Die meisten werfen Messer nach dir! Alle treffen dich!", "137": "Ach, lass den armen unglücklichen Vogel in Ruhe.", "138": "Ich wage zu behaupten, was immer du willst, ist hier irgendwo in der Nähe.", "139": "Ich kenne das Wort \"stopp\" nicht. Benutze \"ende\", wenn du aufgeben willst.", "140": "Von hier aus kommst du da nicht hin.", "141": "Ein sehr großer, zahmer Bär folgt dir.", "142": "Wenn du dein Abenteuer vorzeitig beenden möchtest, sage \"ende\". Mit \"punkte\" siehst du, wie gut du abschneidest. Um für einen Schatz die volle Wertung zu bekommen, musst du ihn sicher im Gebäude abgelegt haben, obwohl du schon Teilpunkte dafür bekommst, ihn gefunden zu haben. Du verlierst Punkte, wenn du getötet wirst oder aufgibst, wobei Ersteres mehr kostet. Außerdem gibt es Punkte dafür, wie viel (falls überhaupt) von der Höhle du erkundet hast; insbesondere gibt es einen großen Bonus dafür, überhaupt hineinzukommen (um die Anfänger vom Rest des Feldes zu unterscheiden), und es gibt andere Möglichkeiten festzustellen, ob du einige der gefährlicheren Abschnitte durchquert hast. Wenn du glaubst, alle Schätze gefunden zu haben, erkunde einfach noch ein Weilchen. Wenn nichts Interessantes geschieht, hast du noch nicht alle gefunden. Wenn *doch* etwas Interessantes geschieht, bedeutet das, dass du einen Bonus bekommst und die Gelegenheit hast, im Meisterabschnitt noch viele weitere Punkte zu sammeln. Ich biete dir gelegentlich Hinweise an, wenn du Schwierigkeiten zu haben scheinst. Wenn ich das tue, warne ich dich vorher, wie sehr es deine Punktzahl beeinflusst, wenn du den Hinweis annimmst. Schließlich kannst du \"kurz\" sagen, was mich anweist, die vollständige Beschreibung eines Ortes nie zu wiederholen, außer du verlangst es ausdrücklich.", "143": "Möchtest du tatsächlich jetzt aufgeben?", "144": "Hier ist nichts, womit du die Vase füllen könntest.", "145": "Der plötzliche Temperaturwechsel hat die Vase behutsam zerspringen lassen.", "146": "Das übersteigt deine Kräfte.", "147": "Ich weiß nicht, wie.", "148": "Es ist zu weit oben, als dass du es erreichen könntest.", "149": "Du hast einen kleinen Zwerg getötet. Der Körper verschwindet in einer Wolke aus fettigem schwarzem Rauch.", "150": "Die Schale ist sehr stark und gegen Angriffe unempfindlich.", "151": "Was ist los, kannst du nicht lesen? Jetzt fängst du besser von vorn an.", "152": "Die Axt prallt wirkungslos an den dicken Schuppen des Drachen ab.", "153": "Der Drache sieht recht fies aus. Du versuchst besser nicht, an ihm vorbeizukommen.", "154": "Der kleine Vogel greift den grünen Drachen an und wird in einem erstaunlichen Wirbel zu Asche verbrannt. Die Asche weht davon.", "155": "Worauf?", "156": "Okay, ab jetzt beschreibe ich einen Ort nur beim ersten Besuch ausführlich. Für die volle Beschreibung sage \"schau\".", "157": "Trolle sind enge Verwandte der Felsen und haben eine Haut so zäh wie ein Nashorn. Der Troll wehrt deine Schläge mühelos ab.", "158": "Der Troll fängt die Axt geschickt auf, untersucht sie sorgfältig und wirft sie zurück mit den Worten: \"Gute Handwerksarbeit, aber nicht wertvoll genug.\"", "159": "Der Troll fängt deinen Schatz und huscht außer Sicht.", "160": "Der Troll lässt dich nicht hinüber.", "161": "Es gibt keinen Weg mehr über den Abgrund.", "162": "Gerade als du die andere Seite erreichst, bricht die Brücke unter dem Gewicht des Bären zusammen, der dir noch immer folgte. Du suchst verzweifelt nach Halt, aber als die Brücke einstürzt, taumelst du zurück und fällst in den Abgrund.", "163": "Der Bär trottet auf den Troll zu, der einen erschreckten Schrei ausstößt und davonhuscht. Der Bär gibt die Verfolgung bald auf und schlendert zurück.", "164": "Die Axt verfehlt und landet neben dem Bären, wo du nicht mehr drankommst.", "165": "Womit? Mit bloßen Händen? Gegen *seine* Bärenpranken??", "166": "Der Bär ist verwirrt; er will nur dein Freund sein.", "167": "Um Himmels willen, das arme Tier ist schon tot!", "168": "Der Bär schlingt dein Essen gierig hinunter und scheint sich danach beträchtlich zu beruhigen und wird sogar recht freundlich.", "169": "Der Bär ist noch immer an die Wand gekettet.", "170": "Die Kette ist noch verschlossen.", "171": "Die Kette ist jetzt aufgeschlossen.", "172": "Die Kette ist jetzt verschlossen.", "173": "Hier gibt es nichts, woran man die Kette schließen könnte.", "174": "Hier gibt es nichts zu essen.", "175": "Möchtest du den Hinweis?", "176": "Brauchst du Hilfe, um aus dem Labyrinth herauszukommen?", "177": "Du kannst die Gänge weniger ähnlich aussehen lassen, indem du Dinge ablegst.", "178": "Versuchst du, jenseits des Plover-Raums zu erkunden?", "179": "Es gibt einen Weg, diese Gegend zu erkunden, ohne dass du fürchten musst, in eine Grube zu fallen. Keiner der verfügbaren Gegenstände ist unmittelbar nützlich, um das Geheimnis zu entdecken.", "180": "Brauchst du Hilfe, um hier herauszukommen?", "181": "Geh nicht nach Westen.", "182": "Völlerei gehört nicht zu den Lastern des Trolls. Habgier hingegen schon.", "183": "Deine Lampe wird trüb. Du kommst besser langsam zum Ende, es sei denn, du findest frische Batterien. Ich glaube mich zu erinnern, dass im Labyrinth ein Verkaufsautomat steht. Bring ein paar Münzen mit.", "184": "Deiner Lampe ist der Strom ausgegangen.", "185": "Es hat nicht viel Sinn, hier draußen herumzuirren, und ohne Lampe kannst du die Höhle nicht erkunden. Machen wir also für heute Schluss.", "186": "Aus der Dunkelheit hinter dir sind schwache Raschelgeräusche zu hören. Als du dich ihnen zuwendest, fällt der Strahl deiner Lampe auf einen bärtigen Piraten. Er trägt eine große Truhe. \"Beim Klabautermann!\", ruft er, \"ich bin entdeckt worden! Ich mache mich besser ins Labyrinth davon, um meine Truhe zu verstecken!\" Mit diesen Worten verschwindet er in der Düsternis.", "187": "Deine Lampe wird trüb. Du holst besser die Batterien.", "188": "Deine Lampe wird trüb. Ich erlaube mir, die Batterien auszutauschen.", "189": "Deine Lampe wird trüb, und du hast keine Ersatzbatterien mehr. Du kommst besser zum Ende.", "190": "Ich fürchte, die Zeitschrift ist auf Zwergisch geschrieben.", "191": "\"DIES IST NICHT DAS LABYRINTH, IN DEM DER PIRAT SEINE SCHATZTRUHE VERSTECKT.\"", "192": "Hmmm, das sieht nach einem Hinweis aus, was bedeutet, dass es dich 10 Punkte kostet, ihn zu lesen. Soll ich ihn trotzdem vorlesen?", "193": "Es heißt: \"Mit diesem Ort stimmt etwas Seltsames nicht, sodass eines der Wörter, die ich schon immer kenne, nun eine neue Wirkung hat.\"", "194": "Es sagt dasselbe wie vorhin.", "195": "Ich fürchte, ich verstehe nicht.", "196": "\"GLÜCKWUNSCH DAZU, LICHT IN DEN DUNKELRAUM GEBRACHT ZU HABEN!\"", "197": "Du versetzt dem Spiegel einen gewaltigen Schlag, woraufhin er in unzählige winzige Splitter zerspringt.", "198": "Du hast die Vase genommen und behutsam auf den Boden geschleudert.", "199": "Du stupst den nächsten Zwerg an, der mürrisch aufwacht, dich ansieht, flucht und nach seiner Axt greift.", "200": "Ist das in Ordnung?"}, "obj": {"1": {"name": "Schlüsselbund", "0": "Hier liegen ein paar Schlüssel auf dem Boden."}, "2": {"name": "Messinglampe", "0": "Eine glänzende Messinglampe liegt in der Nähe.", "1": "Eine leuchtende Lampe liegt in der Nähe."}, "3": {"name": "Gitter", "0": "Das Gitter ist verschlossen.", "1": "Das Gitter ist offen."}, "4": {"name": "Weidenkäfig", "0": "Ein kleiner Weidenkäfig liegt achtlos weggeworfen in der Nähe."}, "5": {"name": "Schwarzer Stab (Stern)", "0": "Ein einen Meter langer schwarzer Stab mit einem rostigen Stern an einem Ende liegt in der Nähe."}, "6": {"name": "Schwarzer Stab (Zeichen)", "0": "Ein einen Meter langer schwarzer Stab mit einem rostigen Zeichen an einem Ende liegt in der Nähe."}, "7": {"name": "Stufen", "0": "Rohe Steinstufen führen die Grube hinab.", "1": "Rohe Steinstufen führen zur Kuppel hinauf."}, "8": {"name": "Kleiner Vogel im Käfig", "0": "Ein fröhlicher kleiner Vogel sitzt hier und singt.", "1": "Ein kleiner Vogel sitzt im Käfig."}, "9": {"name": "Rostige Tür", "0": "Der Weg nach Norden wird von einer gewaltigen, rostigen Eisentür versperrt.", "1": "Der Weg nach Norden führt durch eine gewaltige, rostige Eisentür."}, "10": {"name": "Samtkissen", "0": "Ein kleines Samtkissen liegt auf dem Boden."}, "11": {"name": "Schlange", "0": "Eine riesige, grüne, wilde Schlange versperrt den Weg!", "1": null}, "12": {"name": "Kluft", "0": null, "1": "Eine Kristallbrücke überspannt nun die Kluft.", "2": "Die Kristallbrücke ist verschwunden!"}, "13": {"name": "Steintafel", "0": "Eine gewaltige Steintafel ist in die Wand eingelassen. Darauf steht:\n\"GLÜCKWUNSCH DAZU, LICHT IN DEN DUNKELRAUM GEBRACHT ZU HABEN!\""}, "14": {"name": "Riesenmuschel", "0": "Hier liegt eine riesige Muschel mit fest verschlossener Schale. >GRUNZ!<"}, "15": {"name": "Riesenauster", "0": "Hier liegt eine riesige Auster mit fest verschlossener Schale. >STÖHN!<", "1": "Interessant. Auf der Unterseite der Auster scheint etwas geschrieben zu stehen."}, "16": {"name": "Zeitschrift \"Höhlenforscher heute\"", "0": "Hier liegen ein paar neuere Ausgaben der Zeitschrift \"Höhlenforscher heute\"."}, "17": {"name": "Zwerg"}, "18": {"name": "Messer"}, "19": {"name": "Leckeres Essen", "0": "Hier ist Essen."}, "20": {"name": "Kleine Flasche", "0": "Hier ist eine Flasche Wasser.", "1": "Hier ist eine leere Flasche.", "2": "Hier ist eine Flasche Öl."}, "21": {"name": "Wasser in der Flasche"}, "22": {"name": "Öl in der Flasche"}, "23": {"name": "Spiegel", "0": null}, "24": {"name": "Pflanze", "0": "In der Grube steht eine winzige kleine Pflanze und murmelt: \"Wasser, Wasser, ...\"", "1": "Die Pflanze schießt für ein paar Sekunden in wütendem Wachstum in die Höhe.", "2": "Eine vier Meter hohe Bohnenranke ragt aus der Grube nach oben und brüllt: \"WASSER!! WASSER!!\"", "3": "Die Pflanze wächst explosionsartig und füllt fast den Grund der Grube aus.", "4": "Eine gigantische Bohnenranke erstreckt sich bis hinauf zum Loch.", "5": "Du hast die Pflanze überwässert! Sie schrumpft! Sie, sie ..."}, "25": {"name": "Pflanze (oben)", "0": null, "1": "Die Spitze einer vier Meter hohen Bohnenranke ragt aus der Westgrube.", "2": "Eine riesige Bohnenranke wächst aus der Westgrube hinauf bis zum Loch."}, "26": {"name": "Stalaktit", "0": null}, "27": {"name": "Schattenhafte Gestalt", "0": "Die schattenhafte Gestalt scheint deine Aufmerksamkeit erregen zu wollen."}, "28": {"name": "Zwergenaxt", "0": "Hier liegt eine kleine Axt.", "1": "Eine kleine Axt liegt neben dem Bären."}, "29": {"name": "Höhlenzeichnungen", "0": null}, "30": {"name": "Pirat", "0": null}, "31": {"name": "Drache", "0": "Ein riesiger, grüner, wilder Drache versperrt den Weg!", "1": "GLÜCKWUNSCH! Du hast gerade einen Drachen mit bloßen Händen bezwungen! (Unglaublich, nicht wahr?)", "2": "Der Körper eines riesigen grünen toten Drachen liegt etwas abseits."}, "32": {"name": "Abgrund", "0": "Eine wacklige Holzbrücke führt über den Abgrund und verschwindet im Nebel. Ein Schild auf der Brücke sagt: \"HALT! TROLL BEZAHLEN!\"", "1": "Die Trümmer einer Brücke (und ein toter Bär) sind am Grund des Abgrunds zu sehen."}, "33": {"name": "Troll", "0": "Ein kräftiger Troll steht an der Brücke und besteht darauf, dass du ihm einen Schatz zuwirfst, bevor du hinübergehen darfst.", "1": "Der Troll tritt unter der Brücke hervor und versperrt dir den Weg.", "2": null}, "34": {"name": "Troll (Trugbild)", "0": "Der Troll ist nirgends zu sehen."}, "35": {"name": "Bär", "0": "Ein wilder Höhlenbär beäugt dich vom fernen Ende des Raumes aus!", "1": "Ein sanfter Höhlenbär sitzt friedlich in einer Ecke.", "2": "Ein zufrieden aussehender Bär wandert in der Nähe umher.", "3": null}, "36": {"name": "Nachricht", "0": "Im Staub ist in schwungvoller Schrift eine Nachricht hinterlassen:\n\"DIES IST NICHT DAS LABYRINTH, IN DEM DER PIRAT SEINE SCHATZTRUHE VERSTECKT.\""}, "37": {"name": "Vulkan", "0": null}, "38": {"name": "Automat", "0": "Hier steht ein riesiger Verkaufsautomat. Die Anleitung darauf lautet:\n\"MÜNZEN HIER EINWERFEN, UM FRISCHE BATTERIEN ZU ERHALTEN.\""}, "39": {"name": "Batterien", "0": "Hier liegen frische Batterien.", "1": "Ein paar verbrauchte Batterien liegen achtlos in der Nähe."}, "40": {"name": "Teppich/Moos", "0": null}, "50": {"name": "Großer Goldklumpen", "0": "Hier liegt ein großer, glitzernder Goldklumpen!"}, "51": {"name": "Diamanten", "0": "Hier liegen Diamanten!"}, "52": {"name": "Silberbarren", "0": "Hier liegen Silberbarren!"}, "53": {"name": "Kostbarer Schmuck", "0": "Hier liegt kostbarer Schmuck!"}, "54": {"name": "Seltene Münzen", "0": "Hier liegen viele Münzen!"}, "55": {"name": "Schatztruhe", "0": "Die Schatztruhe des Piraten ist hier!"}, "56": {"name": "Goldene Eier", "0": "Hier ist ein großes Nest voller goldener Eier!", "1": "Das Nest mit den goldenen Eiern ist verschwunden!", "2": "ERLEDIGT!"}, "57": {"name": "Juwelenbesetzter Dreizack", "0": "Hier liegt ein juwelenbesetzter Dreizack!"}, "58": {"name": "Ming-Vase", "0": "Hier steht eine zerbrechliche, kostbare Ming-Vase!", "1": "Die Vase ruht behutsam auf einem Samtkissen.", "2": "Der Boden ist übersät mit wertlosen Tonscherben.", "3": "Die Ming-Vase fällt mit einem zarten Krachen zu Boden."}, "59": {"name": "Eigroßer Smaragd", "0": "Hier liegt ein Smaragd von der Größe eines Ploverseis!"}, "60": {"name": "Platinpyramide", "0": "Hier liegt eine Platinpyramide mit zwanzig Zentimetern Seitenlänge!"}, "61": {"name": "Schimmernde Perle", "0": "Etwas abseits liegt eine schimmernde Perle!"}, "62": {"name": "Perserteppich", "0": "Hier liegt ein Perserteppich auf dem Boden!", "1": "Der Drache liegt ausgestreckt auf einem Perserteppich!!"}, "63": {"name": "Seltene Gewürze", "0": "Hier liegen seltene Gewürze!"}, "64": {"name": "Goldkette", "0": "Hier liegt eine Goldkette in einem Haufen auf dem Boden!", "1": "Der Bär ist mit einer goldenen Kette an die Wand gekettet!", "2": "Eine goldene Kette ist an die Wand geschlossen!"}}, "ui": {"kein_objekt": "Was willst du mit {0} tun?", "ok": "OK", "hier_nichts": "Das gibt es hier nicht.", "tod_hinweis": "Du bist tot.", "ende_titel": "Das Abenteuer ist zu Ende.", "punkte": "Du hast bei {1} Zügen {0} von 350 Punkten erreicht.", "hint_preis": "Ich kann dir einen Hinweis geben, aber das kostet dich {0} Punkte. Möchtest du ihn?", "ja_nein": "Bitte antworte mit ja oder nein.", "mit_was": "Mit was?", "weiter_nicht": "Das hilft dir nicht weiter.", "zwerge": "In diesem Raum sind {0} bedrohliche kleine Zwerge bei dir!", "messer": "{0} scharfe, gemeine Messer werden nach dir geworfen!", "getroffen": "{0} davon treffen dich!", "maut_zurueck": "In der Aufregung hat der Troll deinen Schatz fallen lassen – er liegt nun am Rand der Brücke.", "speichern": "Zum Speichern und Laden benutze die Menüleiste am linken Rand (Speichern / Laden).", "stunden": "Die Höhle ist für Abenteurer jederzeit geöffnet."}, "ranks": [[35, "Du bist offensichtlich ein blutiger Anfänger. Viel Glück beim nächsten Mal."], [100, "Deine Punktzahl qualifiziert dich als Abenteurer der Anfängerklasse."], [130, "Du hast den Rang \"Erfahrener Abenteurer\" erreicht."], [200, "Du darfst dich nun \"Altgedienter Abenteurer\" nennen."], [250, "Du hast den Status \"Junior-Meister\" erreicht."], [300, "Deine Punktzahl reiht dich in die Meister-Abenteurer-Klasse C ein."], [330, "Deine Punktzahl reiht dich in die Meister-Abenteurer-Klasse B ein."], [349, "Deine Punktzahl reiht dich in die Meister-Abenteurer-Klasse A ein."], [9999, "Das ganze Abenteuerland zollt dir Tribut, Abenteurer-Großmeister!"]], "firstWord": {"1": "schluessel", "2": "lampe", "3": "gitter", "4": "kaefig", "5": "stab", "8": "vogel", "9": "tuer", "10": "kissen", "11": "schlange", "12": "kluft", "13": "tafel", "14": "muschel", "15": "auster", "16": "zeitschrift", "17": "zwerg", "18": "messer", "19": "essen", "20": "flasche", "21": "wasser", "22": "oel", "23": "spiegel", "24": "pflanze", "26": "stalaktit", "27": "gestalt", "28": "axt", "29": "zeichnungen", "30": "pirat", "31": "drache", "32": "abgrund", "33": "troll", "35": "baer", "36": "nachricht", "37": "vulkan", "38": "automat", "39": "batterien", "40": "moos", "50": "gold", "51": "diamanten", "52": "silber", "53": "schmuck", "54": "muenzen", "55": "truhe", "56": "eier", "57": "dreizack", "58": "vase", "59": "smaragd", "60": "pyramide", "61": "perle", "62": "teppich", "63": "gewuerze", "64": "kette", "6": "stab"}};
+/* ============================================================
+   COLOSSAL CAVE ADVENTURE – Twine/SugarCube-Engine
+   Portierung der Logik von Crowther/Woods (350 Punkte).
+   Daten (Reisetabelle, Vokabular, Texte) kommen aus ADV_DATA.
+   ============================================================ */
+(function () {
+  "use strict";
+  var D = window.ADV_DATA;
+  var A = window.Adv = {};
+
+  /* ---------- Objektnummern ---------- */
+  var KEYS = 1, LAMP = 2, GRATE = 3, CAGE = 4, ROD = 5, ROD2 = 6, STEPS = 7, BIRD = 8, DOOR = 9,
+      PILLOW = 10, SNAKE = 11, FISSURE = 12, TABLET = 13, CLAM = 14, OYSTER = 15, MAGAZINE = 16,
+      DWARF = 17, KNIFE = 18, FOOD = 19, BOTTLE = 20, WATER = 21, OIL = 22, MIRROR = 23, PLANT = 24,
+      PLANT2 = 25, STALACTITE = 26, FIGURE = 27, AXE = 28, DRAWINGS = 29, PIRATE = 30, DRAGON = 31,
+      CHASM = 32, TROLL = 33, TROLL2 = 34, BEAR = 35, MESSAGE = 36, VOLCANO = 37, MACHINE = 38,
+      BATTERIES = 39, MOSS = 40, GOLD = 50, DIAMONDS = 51, SILVER = 52, JEWELS = 53, COINS = 54,
+      CHEST = 55, EGGS = 56, TRIDENT = 57, VASE = 58, EMERALD = 59, PYRAMID = 60, PEARL = 61,
+      RUG = 62, SPICES = 63, CHAIN = 64;
+  var MAXDIE = 3, MAXHOLD = 7, CHLOC = 114, CHLOC2 = 140;
+
+  /* ---------- Hilfsfunktionen ---------- */
+  function G() {
+    var v = State.variables;
+    if (!v.g && !A._initing) { A._initing = true; try { A.init(); } finally { A._initing = false; } }
+    return v.g;
+  }
+  function rnd() { return State.random(); }
+  function pct(n) { return rnd() * 100 < n; }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function norm(s) {
+    return String(s).toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue")
+      .replace(/ß/g, "ss").replace(/[^a-z0-9?\s]/g, " ").replace(/\s+/g, " ").trim();
+  }
+  function msgText(n) { return D.msg[n] || ""; }
+  function say(t) { if (t) G().out.push(t); }
+  function msg(n) { say(msgText(n)); }
+  function inList(arr, v) { return arr.indexOf(v) >= 0; }
+  function isTreasure(o) { return o >= 50; }
+  function objName(o) { return D.obj[o] ? D.obj[o].name : ("Ding " + o); }
+  function objText(o, p) { var t = D.obj[o]; return t ? t[String(p)] : null; }
+
+  /* ---------- Orte & Objekte ---------- */
+  function placeOf(o) { return G().place[o]; }
+  function toting(o) { return G().place[o] === -1; }
+  function at(o) { var g = G(); return g.place[o] === g.loc || g.fixed[o] === g.loc; }
+  function here(o) { return toting(o) || at(o); }
+  function holding() {
+    var g = G(), n = 0;
+    for (var k in g.place) { if (g.place[k] === -1 && +k !== WATER && +k !== OIL) { n++; } }
+    return n;
+  }
+  function move(o, loc) { G().place[o] = loc; }
+  function carry(o) {
+    var g = G();
+    if (o <= 100 && g.place[o] === -1) { return; }
+    g.place[o] = -1;
+    g.fixed[o] = 0;
+  }
+  function dropAt(o, loc) { G().place[o] = loc; }
+  function destroy(o) { G().place[o] = 0; }
+  function put(o, loc, prop) { var g = G(); g.place[o] = loc; g.prop[o] = prop; g.fixed[o] = 0; }
+  function liq() {   // Inhalt der Flasche: Wasser, Oel oder 0
+    var g = G(), b = g.prop[BOTTLE];
+    if (b === 0) { return WATER; }
+    if (b === 2) { return OIL; }
+    return 0;
+  }
+  function liqLoc(loc) {
+    if (!inList(D.liquid, loc)) { return 0; }
+    return inList(D.oilrooms, loc) ? OIL : WATER;
+  }
+  function lit(loc) {
+    var g = G();
+    if (inList(D.light, loc)) { return true; }
+    return g.prop[LAMP] === 1 && here(LAMP);
+  }
+  function forced(loc) {
+    var rows = D.travel[loc];
+    if (!rows || !rows.length) { return false; }
+    return rows[0][1].indexOf(1) >= 0;
+  }
+
+  /* ---------- Initialisierung ---------- */
+  A.init = function () {
+    var g = { loc: 1, oldloc: 1, oldloc2: 1, turns: 0, limit: 330, lmwarn: false, numdie: 0,
+      gaveup: false, closing: false, closed: false, clock1: 15, clock2: 25, tally: 15,
+      dflag: 0, dloc: [19, 27, 33, 44, 64, CHLOC], odloc: [0, 0, 0, 0, 0, 0], dseen: [0, 0, 0, 0, 0, 0],
+      visit: {}, brief: false, hintct: {}, hintgiven: {}, hintscore: 0, pending: null,
+      over: false, bonus: 0, foobar: 0, detail: 0, log: [], out: [], prop: {}, place: {}, fixed: {},
+      dkilled: 0, firstturn: true, cmdcount: 0, ended: "" };
+    for (var o in D.place0) {
+      g.place[o] = D.place0[o][0];
+      g.fixed[o] = D.place0[o][1];
+      g.prop[o] = isTreasure(+o) ? -1 : 0;
+    }
+    for (var i = 1; i <= 64; i++) {
+      if (g.place[i] === undefined) { g.place[i] = 0; g.fixed[i] = 0; g.prop[i] = isTreasure(i) ? -1 : 0; }
+    }
+    g.prop[CHEST] = -1; g.prop[PEARL] = -1;
+    State.variables.g = g;
+    g.out = [];
+    msg(1);
+    g.out.push("<hr>");
+    look(true);
+    flushLog("");
+  };
+
+  /* ---------- Log ---------- */
+  function flushLog(cmdText) {
+    var g = G();
+    g.log.push({ c: cmdText, o: g.out });
+    if (g.log.length > 14) { g.log.shift(); }
+    g.out = [];
+  }
+
+  /* ---------- Beschreibung ---------- */
+  function roomTexts(loc) {
+    var p = Story.has("R" + ("00" + loc).slice(-3)) ? Story.get("R" + ("00" + loc).slice(-3)).text : "";
+    var parts = p.split(/\r?\n§§§\r?\n/);
+    var longT = parts[0].trim();
+    var shortT = parts.length > 1 ? parts[1].trim() : "";
+    return { long: longT, short: shortT || longT };
+  }
+  function itemLines(loc) {
+    var g = G(), out = [];
+    var ids = [];
+    for (var k in g.place) {
+      var o = +k;
+      if (g.place[o] === loc || (g.fixed[o] === loc && g.place[o] !== -1)) { ids.push(o); }
+    }
+    ids.sort(function (a, b) { return a - b; });
+    ids.forEach(function (o) {
+      if (g.place[o] === -1) { return; }
+      if (g.closed && (loc === 115 || loc === 116)) { return; }
+      if (o === BEAR && g.prop[BEAR] === 2 && toting(BEAR)) { return; }
+      if (o === BIRD && g.prop[BIRD] === 1 && toting(CAGE)) { return; }
+      var p = g.prop[o];
+      if (p < 0) {                       // Schatz zum ersten Mal gesehen
+        if (g.closed) { return; }
+        g.prop[o] = (o === RUG || o === CHAIN) ? 1 : 0;
+        g.tally--;
+        p = g.prop[o];
+      }
+      var idx = p;
+      if (o === STEPS && loc === g.fixed[STEPS]) { idx = 1; }
+      var t = objText(o, idx);
+      if (o === BEAR) { t = objText(BEAR, p); }
+      if (t) { g.out.push(t); }
+    });
+  }
+  function look(forceLong) {
+    var g = G(), loc = g.loc;
+    if (!lit(loc)) {
+      msg(16);
+      return;
+    }
+    var t = roomTexts(loc);
+    var first = !g.visit[loc];
+    var useLong = forceLong || first || (!g.brief && (g.visit[loc] % 5 === 0));
+    g.visit[loc] = (g.visit[loc] || 0) + 1;
+    var txt = useLong ? t.long : t.short;
+    if (txt) { g.out.push(txt); }
+    if (loc === 33 && g.visit[loc] === 1) { /* Y2 */ }
+    // Bruecke, Stalaktit usw. stehen im Objekttext
+    if (toting(BEAR) && g.prop[BEAR] === 2) { msg(141); }
+    itemLines(loc);
+  }
+  function roomName(loc) {
+    var t = roomTexts(loc).short;
+    var m = t.split(/[.!]/)[0];
+    return m.length > 60 ? "" : m;
+  }
+
+  /* ---------- Tod, Ende, Punkte ---------- */
+  function score(final) {
+    var g = G(), s = 2;
+    for (var i = 50; i <= 64; i++) {
+      var k = i < CHEST ? 12 : (i === CHEST ? 14 : 16);
+      if (g.prop[i] >= 0) { s += 2; }
+      if (g.place[i] === 3 && g.prop[i] === 0) { s += k - 2; }
+    }
+    s += (MAXDIE - g.numdie) * 10;
+    if (!g.gaveup) { s += 4; }
+    if (g.dflag > 0) { s += 25; }
+    if (g.closing) { s += 25; }
+    if (g.closed) {
+      if (g.bonus === 0) { s += 10; }
+      else if (g.bonus === 135) { s += 25; }
+      else if (g.bonus === 134) { s += 30; }
+      else if (g.bonus === 133) { s += 45; }
+    }
+    if (g.place[MAGAZINE] === 108) { s += 1; }
+    s -= g.hintscore;
+    return Math.max(0, s);
+  }
+  function rank(s) {
+    for (var i = 0; i < D.ranks.length; i++) { if (s <= D.ranks[i][0]) { return D.ranks[i][1]; } }
+    return "";
+  }
+  function finish(reasonMsg) {
+    var g = G();
+    var s = score(true);
+    g.out.push("<hr>");
+    g.out.push("<strong>" + esc(D.ui.ende_titel) + "</strong>");
+    g.out.push(esc(D.ui.punkte.replace("{0}", s).replace("{1}", g.turns)));
+    g.out.push(esc(rank(s)));
+    g.over = true;
+    g.pending = null;
+  }
+  function die() {
+    var g = G();
+    g.numdie++;
+    var dl = (g.loc === 20 || g.loc === 21 || g.loc === 0) ? g.oldloc : g.loc;
+    if (g.closing || g.closed) { msg(131); finish(); return; }
+    if (g.numdie >= MAXDIE) { msg(81 + (g.numdie - 1) * 2); finish(); return; }
+    g.pending = { type: "reinc", n: g.numdie, dl: dl };
+    msg(81 + (g.numdie - 1) * 2);
+  }
+  function reincarnate() {
+    var g = G(), p = g.pending;
+    msg(82 + (p.n - 1) * 2);
+    g.pending = null;
+    if (toting(LAMP)) { put(LAMP, 1, 0); }
+    for (var k in g.place) {
+      if (g.place[k] === -1) { g.place[k] = p.dl; }
+    }
+    g.prop[BIRD] = g.prop[BIRD];
+    g.loc = g.oldloc = g.oldloc2 = 3;
+    g.out.push("<hr>");
+    look(true);
+  }
+
+  /* ---------- Reisen ---------- */
+  function cond(m, trav) {
+    var g = G();
+    if (m === 0) { return true; }
+    if (m < 100) { return pct(m); }
+    if (m === 100) { return true; }
+    if (m <= 200) { return toting(m - 100); }
+    if (m <= 300) { return toting(m - 200) || at(m - 200); }
+    return g.prop[m % 100] !== (Math.floor(m / 100) - 3);
+  }
+  function describeAfterMove() {
+    var g = G();
+    if (g.loc === 0) { return; }
+    look(false);
+  }
+  function goVerb(verb, skipCount) {
+    var g = G();
+    var rows = D.travel[g.loc] || [];
+    var found = false;
+    for (var i = 0; i < rows.length; i++) {
+      var x = rows[i][0], vs = rows[i][1];
+      if (vs.indexOf(verb) < 0) { continue; }
+      found = true;
+      var m = Math.floor(x / 1000), n = x % 1000;
+      if (!cond(m)) { continue; }
+      if (n <= 300) { return enter(n); }
+      if (n > 500) { msg(n - 500); return false; }
+      if (n === 301) {
+        var hold = holding();
+        if (hold === 0 || (hold === 1 && toting(EMERALD))) { return enter(99 + 100 - g.loc); }
+        msg(117); return false;
+      }
+      if (n === 302) { dropAt(EMERALD, g.loc); continue; }
+      if (n === 303) { return bridge(); }
+    }
+    if (!found) { return null; }
+    return false;
+  }
+  function bridge() {
+    var g = G();
+    if (g.prop[TROLL] === 1) {                 // Troll tritt beim zweiten Mal wieder hervor
+      say(objText(TROLL, 1));
+      g.prop[TROLL] = 0;
+      destroy(TROLL2); g.fixed[TROLL2] = 0;
+      g.place[TROLL] = 117; g.fixed[TROLL] = 122;
+      return false;
+    }
+    var dest = g.loc === 117 ? 122 : 117;
+    if (g.prop[TROLL] === 0) { g.prop[TROLL] = 1; }
+    if (toting(BEAR)) {
+      msg(162);
+      g.prop[CHASM] = 1; g.prop[TROLL] = 2;
+      dropAt(BEAR, dest); g.fixed[BEAR] = -1; g.prop[BEAR] = 3;
+      g.oldloc = dest;
+      g.loc = 21;
+      die();
+      return true;
+    }
+    return enter(dest);
+  }
+  function enter(newloc) {
+    var g = G();
+    var from = g.loc;
+    var wasDark = !lit(from);
+    g.oldloc2 = g.oldloc;
+    g.oldloc = from;
+    g.loc = newloc;
+    if (newloc === 0 || newloc === 20 || newloc === 21) {
+      // Todesfaelle: Text, dann Tod
+      var t = (newloc === 0) ? "" : roomTexts(newloc).long;
+      if (t) { say(t); }
+      die();
+      return true;
+    }
+    if (forced(newloc)) {
+      var tx = roomTexts(newloc).long;
+      if (tx) { say(tx); }
+      var guard = 0;
+      while (forced(g.loc) && guard++ < 6 && !g.over && !g.pending) {
+        var r = goVerb(1);
+        if (r === null || r === false) { break; }
+      }
+      return true;
+    }
+    if (wasDark && !lit(newloc) && newloc >= 15 && pct(35)) {
+      msg(23);
+      die();
+      return true;
+    }
+    describeAfterMove();
+    return true;
+  }
+
+  /* ---------- Bewegung per Wort ---------- */
+  function motion(m) {
+    var g = G();
+    if (m === 21 || m === 22) { msg(54); return; }
+    if (m === 57) { g.detail++; look(true); return; }
+    if (m === 59 || m === 58) { msg(m === 59 ? 138 : 138); return; }
+    if (m === 67) { if (g.loc < 8) { msg(57); } else { msg(58); } return; }
+    if (m === 8) {
+      var k = g.oldloc;
+      if (forced(k)) { k = g.oldloc2; }
+      if (k === g.loc) { msg(91); return; }
+      var rows = D.travel[g.loc] || [];
+      for (var i = 0; i < rows.length; i++) {
+        var n = rows[i][0] % 1000;
+        if (n === k) { enter(k); return; }
+      }
+      msg(140);
+      return;
+    }
+    if (m === 2 && g.loc > 8) { msg(9); return; }
+    if (m === 42 || m === 69) {
+      var rr = D.travel[g.loc] || [];
+      for (var q = 0; q < rr.length; q++) { if (rr[q][1].indexOf(41) >= 0 && rr[q][1].indexOf(m) < 0) { m = 41; break; } }
+    }
+    var n0 = g.out.length, l0 = g.loc;
+    var r = goVerb(m);
+    if (r === false && g.out.length === n0 && g.loc === l0) { msg(9); return; }
+    if (r === null) {
+      if (m === 62 || m === 65 || m === 71) { msg(42); return; }
+      if (inList([29, 30, 43, 44, 45, 46, 47, 48, 49, 50], m)) { msg(9); }
+      else if (inList([7, 36, 37, 68], m)) { msg(10); }
+      else if (inList([11, 19], m)) { msg(11); }
+      else if (m === 3 || m === 4 || m === 5) { msg(12); }
+      else if (m === 12 && g.loc < 8) { msg(12); }
+      else { msg(12); }
+    }
+  }
+
+  /* ---------- Zug-Ende: Zwerge, Pirat, Lampe, Schliessung ---------- */
+  function atDwarf() {
+    var g = G();
+    for (var i = 0; i < 5; i++) { if (g.dloc[i] === g.loc && g.dseen[i]) { return i + 1; } }
+    return 0;
+  }
+  function dwarfMove(i) {
+    var g = G(), here0 = g.dloc[i];
+    var rows = D.travel[here0] || [], opts = [];
+    rows.forEach(function (r) {
+      var m = Math.floor(r[0] / 1000), n = r[0] % 1000;
+      if (n > 300 || n < 15) { return; }
+      if (n === g.odloc[i] || n === here0) { return; }
+      if (forced(n) || inList(D.nopirate, n)) { return; }
+      if (m === 100) { return; }
+      if (r[1].indexOf(1) >= 0) { return; }
+      opts.push(n);
+    });
+    if (!opts.length) { return here0; }
+    return opts[Math.floor(rnd() * opts.length)];
+  }
+  function dwarvesAndPirate() {
+    var g = G();
+    if (g.loc === 0 || forced(g.loc) || inList(D.nopirate, g.loc)) { return; }
+    if (g.dflag === 0) { if (g.loc >= 15) { g.dflag = 1; } return; }
+    if (g.dflag === 1) {
+      if (g.loc < 15 || !pct(5)) { return; }
+      g.dflag = 2;
+      for (var q = 0; q < 2; q++) { if (pct(50)) { g.dloc[Math.floor(rnd() * 5)] = 0; } }
+      for (var z = 0; z < 5; z++) { if (g.dloc[z] === g.loc) { g.dloc[z] = 18; } g.odloc[z] = g.dloc[z]; }
+      msg(3);
+      dropAt(AXE, g.loc);
+      return;
+    }
+    var dtotal = 0, attack = 0, stick = 0;
+    for (var i = 0; i < 6; i++) {
+      if (g.dloc[i] === 0) { continue; }
+      var nl = dwarfMove(i);
+      g.odloc[i] = g.dloc[i];
+      g.dloc[i] = nl;
+      var seen = (g.dseen[i] && g.loc >= 15) || g.dloc[i] === g.loc || g.odloc[i] === g.loc;
+      g.dseen[i] = seen ? 1 : 0;
+      if (seen) {
+        g.dloc[i] = g.loc;
+        if (i === 5) { pirate(); }
+        else {
+          dtotal++;
+          if (g.odloc[i] === g.dloc[i] && attack < 2) {   // hoechstens zwei Messer pro Zug
+            attack++;
+            if (rnd() * 1000 < 50 * (g.dflag - 2)) { stick++; }
+          }
+        }
+      }
+    }
+    if (dtotal === 0) { return; }
+    if (dtotal === 1) { msg(4); } else { say(D.ui.zwerge.replace("{0}", dtotal)); }
+    if (attack === 0) { return; }
+    if (g.dflag === 2) { g.dflag = 3; }
+    if (attack === 1) { msg(5); } else { say(D.ui.messer.replace("{0}", attack)); }
+    if (stick === 0) { msg(6); if (attack > 1) { return; } return; }
+    if (stick === 1) { msg(7); } else { say(D.ui.getroffen.replace("{0}", stick)); }
+    g.loc = 21;
+    die();
+  }
+  function pirate() {
+    var g = G();
+    if (g.loc === CHLOC || g.prop[CHEST] >= 0) { return; }
+    var k = false;
+    for (var i = 50; i <= 64; i++) {
+      if (i === PYRAMID && (g.loc === g.place[PYRAMID] || g.loc === g.place[EMERALD])) { continue; }
+      if (toting(i) || (g.place[i] === g.loc && g.prop[i] >= 0)) { k = true; break; }
+    }
+    if (!k) {
+      if (g.tally === 1 && g.place[CHEST] === 0 && here(LAMP) && g.prop[LAMP] === 1) {
+        msg(186);
+        move(CHEST, CHLOC); move(MESSAGE, CHLOC2);
+        g.dloc[5] = CHLOC; g.odloc[5] = CHLOC; g.dseen[5] = 0;
+        return;
+      }
+      if (g.odloc[5] !== g.dloc[5] && pct(20)) { msg(127); }
+      return;
+    }
+    msg(128);
+    if (g.place[CHEST] === 0) { move(CHEST, CHLOC); move(MESSAGE, CHLOC2); }
+    for (var j = 50; j <= 64; j++) {
+      if (j === PYRAMID && (g.loc === g.place[PYRAMID] || g.loc === g.place[EMERALD])) { continue; }
+      if ((g.place[j] === g.loc && g.fixed[j] === 0) || toting(j)) {
+        if (g.place[j] === g.loc && j === 62 && g.prop[DRAGON] === 0) { continue; }
+        g.place[j] = CHLOC;
+        if (g.prop[j] < 0) { g.prop[j] = 0; }
+      }
+    }
+    g.dloc[5] = CHLOC; g.odloc[5] = CHLOC; g.dseen[5] = 0;
+  }
+  function closingBegins() {
+    var g = G();
+    g.prop[GRATE] = 0; g.prop[FISSURE] = 0;
+    for (var i = 0; i < 6; i++) { g.dseen[i] = 0; g.dloc[i] = 0; }
+    g.place[TROLL] = 0; g.fixed[TROLL] = 0;
+    g.place[TROLL2] = 117; g.fixed[TROLL2] = 122;
+    if (g.prop[CHASM] !== 0) { g.prop[CHASM] = 0; }
+    if (g.prop[BEAR] !== 3) { destroy(BEAR); }
+    g.prop[CHAIN] = 0; g.fixed[CHAIN] = 0;
+    g.prop[AXE] = 0; g.fixed[AXE] = 0;
+    msg(129);
+    g.closing = true;
+  }
+  function closedNow() {
+    var g = G();
+    put(BOTTLE, 115, 1); put(PLANT, 115, 0); put(OYSTER, 115, 0); put(LAMP, 115, 0);
+    put(ROD, 115, 0); put(DWARF, 115, 0);
+    g.loc = g.oldloc = g.oldloc2 = 115;
+    put(GRATE, 116, 0); put(SNAKE, 116, 1); put(BIRD, 116, 1); put(CAGE, 116, 0);
+    put(ROD2, 116, 0); put(PILLOW, 116, 0);
+    put(MIRROR, 115, 0); g.fixed[MIRROR] = 116;
+    for (var i = 1; i <= 64; i++) { if (g.place[i] === -1) { g.place[i] = 0; } }
+    msg(132);
+    g.closed = true;
+    g.out.push("<hr>");
+    look(true);
+  }
+  function hintCheck() {
+    var g = G();
+    D.hints.forEach(function (h) {
+      var no = h[0], thr = h[1], cost = h[2];
+      if (thr === 9999) { return; }
+      var rooms = D.hintrooms[no] || [];
+      if (g.hintgiven[no]) { return; }
+      if (rooms.indexOf(g.loc) < 0) { g.hintct[no] = 0; return; }
+      g.hintct[no] = (g.hintct[no] || 0) + 1;
+      if (g.hintct[no] >= thr && !g.pending && !g.over) {
+        g.hintct[no] = 0;
+        g.pending = { type: "hintq", no: no, q: h[3], a: h[4], cost: cost };
+        say(msgText(h[3]));
+      }
+    });
+  }
+  function trollScare() {
+    var g = G();
+    if (!toting(BEAR) || !at(TROLL)) { return; }
+    msg(163);
+    g.place[TROLL] = 0; g.fixed[TROLL] = 0;
+    g.place[TROLL2] = 117; g.fixed[TROLL2] = 122;
+    g.prop[TROLL] = 2;
+  }
+  function endTurn() {
+    var g = G();
+    if (g.over || g.pending) { return; }
+    g.turns++;
+    trollScare();
+    // Schliessung
+    if (!g.closing && g.tally === 0 && g.loc >= 15 && g.loc !== 33 && !g.closed) {
+      g.clock1--;
+      if (g.clock1 === 0) { closingBegins(); }
+    } else if (g.closing && !g.closed) {
+      g.clock2--;
+      if (g.clock2 === 0) { closedNow(); return; }
+    }
+    if (g.closed) { return; }
+    dwarvesAndPirate();
+    if (g.over || g.pending) { return; }
+    // Lampe
+    if (g.prop[LAMP] === 1) { g.limit--; }
+    if (g.limit <= 30 && here(BATTERIES) && g.prop[BATTERIES] === 0 && here(LAMP)) {
+      msg(188);
+      g.prop[BATTERIES] = 1;
+      if (toting(BATTERIES)) { dropAt(BATTERIES, g.loc); }
+      g.limit += 2500; g.lmwarn = false;
+    } else if (g.limit === 0) {
+      g.limit = -1; g.prop[LAMP] = 0;
+      if (here(LAMP)) { msg(184); }
+    } else if (g.limit < 0 && g.loc <= 8) {
+      msg(185); g.gaveup = true; finish(); return;
+    } else if (g.limit <= 30 && !g.lmwarn && here(LAMP)) {
+      g.lmwarn = true;
+      if (g.place[BATTERIES] === 0) { msg(183); }
+      else if (g.prop[BATTERIES] === 1) { msg(189); }
+      else { msg(187); }
+    }
+    hintCheck();
+  }
+
+  /* ---------- Aktionen ---------- */
+  function listInventory() {
+    var g = G(), items = [];
+    for (var k in g.place) {
+      var o = +k;
+      if (g.place[o] === -1 && o !== BEAR && o !== WATER && o !== OIL) { items.push(o); }
+    }
+    items.sort(function (a, b) { return a - b; });
+    if (!items.length && !toting(BEAR)) { msg(98); return; }
+    msg(99);
+    items.forEach(function (o) {
+      var n = objName(o);
+      if (o === BOTTLE) { n = ["Flasche mit Wasser", "Leere Flasche", "Flasche mit Öl"][g.prop[BOTTLE]]; }
+      if (o === LAMP) { n = g.prop[LAMP] === 1 ? "Messinglampe (an)" : "Messinglampe (aus)"; }
+      if (o === CAGE && g.prop[BIRD] === 1) { n = "Weidenkäfig mit Vogel"; }
+      if (o === BIRD) { return; }
+      g.out.push("&nbsp;&nbsp;– " + esc(n));
+    });
+    if (toting(BEAR)) { msg(141); }
+  }
+  function doTake(o) {
+    var g = G();
+    if (o === ROD && (toting(ROD) || !here(ROD)) && here(ROD2) && !toting(ROD2)) { o = ROD2; }
+    if (toting(o)) { msg(24); return; }
+    if (o === WATER || o === OIL) {
+      if (!here(BOTTLE) || liq() !== o) {
+        if (toting(BOTTLE) && g.prop[BOTTLE] === 1) { return doFill(BOTTLE); }
+        if (liqLoc(g.loc) === o || liqLoc(g.loc) === 0) { /* fallthrough */ }
+        if (!toting(BOTTLE)) { msg(104); return; }
+        return doFill(BOTTLE);
+      }
+      o = BOTTLE;
+    }
+    if (o === KNIFE) { msg(116); return; }
+    if (!at(o) && !toting(o) && o !== BOTTLE) {
+      say(esc(D.ui.hier_nichts));
+      return;
+    }
+    if (g.fixed[o] !== 0) {
+      if (o === PLANT && g.prop[PLANT] <= 0) { msg(115); return; }
+      if (o === BEAR && g.prop[BEAR] === 1) { msg(169); return; }
+      if (o === CHAIN) { if (g.prop[BEAR] === 0) { msg(41); } else { msg(170); } return; }
+      msg(25); return;
+    }
+    if (o === BEAR && g.prop[BEAR] !== 2) { msg(25); return; }
+    if (holding() >= MAXHOLD) { msg(92); return; }
+    if (o === BIRD && g.prop[BIRD] === 0) {
+      if (toting(ROD)) { msg(26); return; }
+      if (!toting(CAGE)) { msg(27); return; }
+      g.prop[BIRD] = 1;
+    }
+    carry(o);
+    if ((o === BIRD || o === CAGE) && g.prop[BIRD] !== 0) {
+      carry(BIRD); carry(CAGE);
+    }
+    if (o === BOTTLE && g.prop[BOTTLE] === 0) { /* Wasser rutscht mit */ }
+    msg(54);
+  }
+  function doDrop(o) {
+    var g = G();
+    if (o === ROD && !toting(ROD) && toting(ROD2)) { o = ROD2; }
+    if (o === WATER || o === OIL) { return doPour(o); }
+    if (!toting(o)) { msg(29); return; }
+    if (o === BIRD && here(SNAKE)) {
+      msg(30);
+      if (g.closed) { msg(137); return; }
+      destroy(SNAKE); g.prop[SNAKE] = 1;
+      g.prop[BIRD] = 0; dropAt(BIRD, g.loc);
+      return;
+    }
+    if (o === COINS && here(MACHINE)) {
+      destroy(COINS);
+      dropAt(BATTERIES, g.loc);
+      g.prop[BATTERIES] = 0;
+      say(objText(BATTERIES, 0));
+      return;
+    }
+    if (o === BIRD && here(DRAGON) && g.prop[DRAGON] === 0) {
+      msg(154);
+      destroy(BIRD); g.prop[BIRD] = 0;
+      return;
+    }
+    if (o === BEAR && at(TROLL)) { /* Troll haelt Abstand */ }
+    if (o === BIRD) { g.prop[BIRD] = 0; }
+    if (o === VASE) {
+      if (g.place[PILLOW] === g.loc) { say(objText(VASE, 1)); }
+      else { g.prop[VASE] = 2; g.fixed[VASE] = -1; say(objText(VASE, 3)); }
+    } else if (o === CAGE && g.prop[BIRD] !== 0) {
+      dropAt(BIRD, g.loc);
+    } else if (o === BEAR) {
+      msg(54);
+    } else {
+      msg(54);
+    }
+    dropAt(o, g.loc);
+    if (o === CAGE && g.prop[BIRD] !== 0) { dropAt(BIRD, g.loc); }
+  }
+  function doPour(o) {
+    var g = G();
+    if (o === 0 || o === BOTTLE) { o = liq(); }
+    if (o === 0) { msg(78); return; }
+    if (!toting(BOTTLE) || liq() !== o) { msg(29); return; }
+    g.prop[BOTTLE] = 1;
+    g.place[o] = 0;
+    if (at(PLANT)) {
+      if (o !== WATER) { msg(112); return; }
+      var p = g.prop[PLANT];
+      if (p === 0) { say(objText(PLANT, 1)); g.prop[PLANT] = 2; }
+      else if (p === 2) { say(objText(PLANT, 3)); g.prop[PLANT] = 4; }
+      else { say(objText(PLANT, 5)); g.prop[PLANT] = 0; }
+      g.prop[PLANT2] = g.prop[PLANT] / 2;
+      return;
+    }
+    if (at(DOOR)) {
+      if (o === OIL) { g.prop[DOOR] = 1; msg(114); } else { msg(113); }
+      return;
+    }
+    msg(77);
+  }
+  function doFill(o) {
+    var g = G();
+    if (o === VASE) {
+      if (liqLoc(g.loc) === 0) { msg(144); return; }
+      msg(145);
+      g.prop[VASE] = 2; g.fixed[VASE] = -1;
+      if (toting(VASE)) { dropAt(VASE, g.loc); }
+      return;
+    }
+    if (o !== 0 && o !== BOTTLE) { msg(109); return; }
+    if (!here(BOTTLE)) { msg(o === 0 ? 61 : 29); return; }
+    if (liqLoc(g.loc) === 0) { msg(106); return; }
+    if (liq() !== 0) { msg(105); return; }
+    var oil = liqLoc(g.loc) === OIL;
+    g.prop[BOTTLE] = oil ? 2 : 0;
+    if (toting(BOTTLE)) { g.place[oil ? OIL : WATER] = -1; }
+    msg(oil ? 108 : 107);
+  }
+  function doUnlock(o, lock) {
+    var g = G();
+    if (o !== 0 && !here(o) && !(o === GRATE && at(GRATE))) { say(esc(D.ui.hier_nichts)); return; }
+    if (o === 0) {
+      if (here(GRATE)) { o = GRATE; }
+      else if (here(DOOR)) { o = DOOR; }
+      else if (here(CHAIN)) { o = CHAIN; }
+      else if (here(CLAM)) { o = CLAM; }
+      else if (here(OYSTER)) { o = OYSTER; }
+      else { msg(28); return; }
+    }
+    if (o === CLAM || o === OYSTER) {
+      if (lock) { msg(33); return; }
+      var isClam = o === CLAM;
+      if (toting(o)) { msg(isClam ? 120 : 121); return; }
+      if (!toting(TRIDENT)) { msg(isClam ? 122 : 123); return; }
+      if (isClam) {
+        msg(124);
+        destroy(CLAM); dropAt(OYSTER, g.loc); dropAt(PEARL, 105);
+      } else { msg(125); }
+      return;
+    }
+    if (o === DOOR) { msg(g.prop[DOOR] === 1 ? 54 : 111); return; }
+    if (o === CAGE) { msg(32); return; }
+    if (o === KEYS) { msg(55); return; }
+    if (o === GRATE || o === CHAIN) {
+      if (!here(KEYS)) { msg(31); return; }
+      if (o === GRATE) {
+        if (g.closing) { msg(130); if (!g.pending) { /* kein Toten-Ausgang */ } return; }
+        if (lock) { if (g.prop[GRATE] === 0) { msg(34); } else { g.prop[GRATE] = 0; msg(35); } }
+        else { if (g.prop[GRATE] === 1) { msg(37); } else { g.prop[GRATE] = 1; msg(36); } }
+        return;
+      }
+      // Kette
+      if (lock) {
+        if (g.prop[CHAIN] !== 0) { msg(34); return; }
+        if (g.loc !== g.place[BEAR] && g.loc !== 130) { msg(173); return; }
+        g.prop[CHAIN] = 2;
+        if (toting(CHAIN)) { dropAt(CHAIN, g.loc); }
+        g.fixed[CHAIN] = -1;
+        msg(172);
+      } else {
+        if (g.prop[BEAR] === 0) { msg(41); return; }
+        if (g.prop[CHAIN] === 0) { msg(37); return; }
+        g.prop[CHAIN] = 0; g.fixed[CHAIN] = 0;
+        if (g.prop[BEAR] !== 3) { g.prop[BEAR] = 2; g.fixed[BEAR] = 0; }
+        msg(171);
+      }
+      return;
+    }
+    msg(33);
+  }
+  function doAttack(o) {
+    var g = G();
+    if (o === 0) {
+      var cands = [];
+      if (atDwarf()) { cands.push(DWARF); }
+      if (here(SNAKE)) { cands.push(SNAKE); }
+      if (at(DRAGON) && g.prop[DRAGON] === 0) { cands.push(DRAGON); }
+      if (at(TROLL)) { cands.push(TROLL); }
+      if (here(BEAR) && g.prop[BEAR] === 0) { cands.push(BEAR); }
+      if (here(BIRD) && !g.closed) { cands.push(BIRD); }
+      if (cands.length === 0) { msg(44); return; }
+      if (cands.length > 1) { msg(61); return; }
+      o = cands[0];
+    }
+    if (o !== 0 && !here(o) && !(o === DWARF && atDwarf()) && o !== DRAGON && o !== TROLL) { say(esc(D.ui.hier_nichts)); return; }
+    if (o === BIRD) {
+      if (g.closed) { msg(137); return; }
+      destroy(BIRD); g.prop[BIRD] = 0; msg(45); return;
+    }
+    if (o === CLAM || o === OYSTER) { msg(150); return; }
+    if (o === SNAKE) { msg(46); return; }
+    if (o === DWARF) {
+      if (g.closed) { msg(199); msg(136); finish(); return; }
+      msg(49); return;
+    }
+    if (o === DRAGON) {
+      if (g.prop[DRAGON] !== 0) { msg(167); return; }
+      g.pending = { type: "dragon" };
+      msg(49);
+      return;
+    }
+    if (o === TROLL) { msg(157); return; }
+    if (o === BEAR) { msg(165 + Math.floor((g.prop[BEAR] + 1) / 2)); return; }
+    msg(inList([MAGAZINE, MIRROR], o) ? 146 : 110);
+  }
+  function killDragon() {
+    var g = G();
+    g.pending = null;
+    say(objText(DRAGON, 1));
+    g.prop[DRAGON] = 2; g.prop[RUG] = 0;
+    var k = Math.floor((g.place[DRAGON] + g.fixed[DRAGON]) / 2);
+    g.place[DRAGON] = k; g.fixed[DRAGON] = -1;
+    g.place[RUG] = k; g.fixed[RUG] = 0;
+    for (var i = 1; i <= 64; i++) { if (g.place[i] === 119 || g.place[i] === 121) { if (i !== DRAGON && i !== RUG) { g.place[i] = k; } } }
+    g.oldloc2 = g.loc;
+    g.loc = k; g.oldloc = k;
+    look(true);
+  }
+  function doThrow(o) {
+    var g = G();
+    if (o === ROD && !toting(ROD) && toting(ROD2)) { o = ROD2; }
+    if (!toting(o)) { msg(29); return; }
+    if (isTreasure(o) && at(TROLL)) {
+      msg(159);
+      destroy(o);
+      g.toll = o;
+      g.place[TROLL] = 0; g.fixed[TROLL] = 0;
+      g.place[TROLL2] = 117; g.fixed[TROLL2] = 122;
+      return;
+    }
+    if (o === FOOD && here(BEAR)) { return doFeed(BEAR); }
+    if (o !== AXE) { return doDrop(o); }
+    var d = atDwarf();
+    if (d) {
+      if (pct(66)) {
+        g.dloc[d - 1] = 0; g.dseen[d - 1] = 0;
+        msg(149);
+      } else { msg(48); }
+      dropAt(AXE, g.loc);
+      return;
+    }
+    if (at(DRAGON) && g.prop[DRAGON] === 0) { msg(152); dropAt(AXE, g.loc); return; }
+    if (at(TROLL)) { msg(158); return; }
+    if (here(BEAR) && g.prop[BEAR] === 0) {
+      msg(164);
+      dropAt(AXE, g.loc); g.fixed[AXE] = -1; g.prop[AXE] = 1;
+      return;
+    }
+    doDrop(o);
+  }
+  function doFeed(o) {
+    var g = G();
+    if (o !== 0 && !here(o)) { say(esc(D.ui.hier_nichts)); return; }
+    if (o === BIRD) { msg(100); return; }
+    if (o === SNAKE || o === DRAGON || o === TROLL) { msg(o === DRAGON && g.prop[DRAGON] !== 0 ? 110 : 102); return; }
+    if (o === DWARF) {
+      if (here(FOOD)) { g.dflag++; msg(103); } else { msg(14); }
+      return;
+    }
+    if (o === BEAR) {
+      if (!here(FOOD)) {
+        if (g.prop[BEAR] === 0) { msg(102); }
+        else if (g.prop[BEAR] === 3) { msg(110); }
+        else { msg(14); }
+        return;
+      }
+      destroy(FOOD);
+      g.prop[BEAR] = 1; g.fixed[AXE] = 0; g.prop[AXE] = 0;
+      msg(168);
+      return;
+    }
+    msg(14);
+  }
+  function doEat(o) {
+    var g = G();
+    if (o === 0) { if (here(FOOD)) { o = FOOD; } else { msg(174); return; } }
+    if (o === FOOD) {
+      if (!here(FOOD)) { msg(29); return; }
+      destroy(FOOD); msg(72); return;
+    }
+    if (inList([BIRD, SNAKE, CLAM, OYSTER, DWARF, DRAGON, TROLL, BEAR], o)) { msg(71); return; }
+    msg(110);
+  }
+  function doDrink(o) {
+    var g = G();
+    if (o === BOTTLE || o === 0 || o === WATER) {
+      if (liq() === WATER && here(BOTTLE) && (o !== 0 || !liqLoc(g.loc))) {
+        g.prop[BOTTLE] = 1; g.place[WATER] = 0; msg(74); return;
+      }
+      if (liqLoc(g.loc) === WATER) { msg(73); return; }
+      if (liq() === WATER && here(BOTTLE)) { g.prop[BOTTLE] = 1; g.place[WATER] = 0; msg(74); return; }
+    }
+    msg(110);
+  }
+  function doRead(o) {
+    var g = G();
+    if (o === 0) {
+      if (here(MAGAZINE)) { o = MAGAZINE; }
+      else if (at(TABLET)) { o = TABLET; }
+      else if (at(MESSAGE)) { o = MESSAGE; }
+      else if (here(OYSTER) && g.closed) { o = OYSTER; }
+      else { msg(195); return; }
+    }
+    if (o === MAGAZINE) { msg(190); return; }
+    if (o === TABLET) { msg(196); return; }
+    if (o === MESSAGE) { msg(191); return; }
+    if (o === OYSTER && g.closed && toting(OYSTER)) {
+      if (g.hintgiven[2]) { msg(194); return; }
+      g.pending = { type: "hintq2" };
+      msg(192);
+      return;
+    }
+    if (o === OYSTER && here(OYSTER)) { msg(g.closed ? 195 : 195); return; }
+    msg(195);
+  }
+  function doWave(o) {
+    var g = G();
+    if (o === ROD && !toting(ROD) && toting(ROD2)) { o = ROD2; }
+    if (!toting(o)) { msg(29); return; }
+    if (o !== ROD || !toting(ROD) || (!here(BIRD) && g.closing && false)) { msg(42); return; }
+    if (at(FISSURE)) {
+      var p = g.prop[FISSURE];
+      say(objText(FISSURE, p === 0 ? 1 : 2));
+      g.prop[FISSURE] = p === 0 ? 1 : 0;
+      return;
+    }
+    if (g.closed && here(BIRD)) { msg(42); return; }
+    msg(42);
+  }
+  function doBlast() {
+    var g = G();
+    if (g.prop[ROD2] < 0 || !g.closed) { msg(67); return; }
+    g.bonus = 133;
+    if (g.loc === 115) { g.bonus = 134; }
+    if (here(ROD2)) { g.bonus = 135; }
+    msg(g.bonus);
+    finish();
+  }
+  function doBreak(o) {
+    var g = G();
+    if (o === MIRROR) {
+      if (g.closed) { msg(197); msg(136); finish(); return; }
+      msg(148); return;
+    }
+    if (o === VASE && g.prop[VASE] === 0) {
+      if (toting(VASE)) { dropAt(VASE, g.loc); }
+      msg(198);
+      g.prop[VASE] = 2; g.fixed[VASE] = -1;
+      return;
+    }
+    msg(146);
+  }
+  function doFoo(k) {
+    var g = G();
+    if (k !== g.foobar + 1) {
+      msg(g.foobar === 0 ? 42 : 151);
+      g.foobar = 0;
+      return;
+    }
+    g.foobar = k;
+    if (k !== 4) { msg(54); return; }
+    g.foobar = 0;
+    if (g.place[EGGS] === 92 || (toting(EGGS) && g.loc === 92)) { msg(42); return; }
+    if (g.place[EGGS] === 0 && g.place[TROLL] === 0 && g.prop[TROLL] === 0) { g.prop[TROLL] = 1; }
+    var kk;
+    if (g.loc === 92) { kk = 2; }
+    else if (here(EGGS)) { kk = 1; }
+    else { kk = 0; }
+    if (toting(EGGS)) { dropAt(EGGS, g.loc); }
+    g.place[EGGS] = 92;
+    if (g.prop[EGGS] < 0) { g.prop[EGGS] = 0; }
+    if (kk === 0) { msg(42); return; }
+    say(objText(EGGS, kk));
+    if (kk === 2 && g.loc === 92) { /* Nest erscheint hier */ }
+  }
+  function doHint(yes) {
+    var g = G(), p = g.pending;
+    g.pending = null;
+    if (!yes) { msg(54); return; }
+    if (p.type === "hintq2") {
+      g.hintscore += 10; g.hintgiven[2] = true; msg(193); return;
+    }
+    if (p.stage === 1) {
+      g.hintscore += p.cost; g.hintgiven[p.no] = true; say(msgText(p.a)); return;
+    }
+  }
+
+  /* ---------- Parser ---------- */
+  var FILLER = {};
+  ("nach zu zum zur der die das den dem ein eine einen einem mit am an im in auf aus von vom bitte mal doch noch dann und " +
+   "dort hier ihn sie es ihm").split(" ").forEach(function (w) { FILLER[w] = 1; });
+  // "auf", "aus", "an", "in" sind teils auch Richtungswoerter -> Vokabular hat Vorrang (siehe lookup)
+  function lookup(w) {
+    var v = D.vocab[w];
+    if (v === undefined && w.length > 5) { v = D.vocab[w.slice(0, 5)]; }
+    return v;
+  }
+  function parse(text) {
+    var words = norm(text).split(" ").filter(Boolean);
+    var toks = [];
+    words.forEach(function (w) {
+      var v = lookup(w);
+      if (v !== undefined) { toks.push({ w: w, v: v }); }
+      else if (FILLER[w]) { /* ignorieren */ }
+      else { toks.push({ w: w, v: -1 }); }
+    });
+    return toks;
+  }
+  function ynAnswer(text) {
+    var t = norm(text);
+    if (/^(ja|j|jo|y|yes|klar|ok|okay|gerne|yep)$/.test(t)) { return true; }
+    if (/^(nein|n|no|nee|nope)$/.test(t)) { return false; }
+    return null;
+  }
+  function objectsHere() {
+    var g = G(), out = [];
+    for (var k in g.place) {
+      var o = +k;
+      if (here(o) && o !== WATER && o !== OIL) { out.push(o); }
+    }
+    return out;
+  }
+  function inferObject(verb) {
+    var g = G(), list = objectsHere().filter(function (o) { return g.fixed[o] === 0 || verb === 2004 || verb === 2006; });
+    return list;
+  }
+  function execute(toks, raw) {
+    var g = G();
+    if (!toks.length) { msg(61); return; }
+    // erstes bekanntes Wort pruefen
+    var unknown = toks.filter(function (t) { return t.v === -1; });
+    if (toks[0].v === -1) { msg(60); return; }
+    var verb = null, obj = null, mot = null, spec = null, k;
+    for (k = 0; k < toks.length; k++) {
+      var v = toks[k].v;
+      if (v < 0) { continue; }
+      if (v < 1000) { if (mot === null) { mot = v; } }
+      else if (v < 2000) { if (obj === null) { obj = v - 1000; } }
+      else if (v < 3000) { if (verb === null) { verb = v; } }
+      else { if (spec === null) { spec = v; } }
+    }
+    // Sonderfaelle: reine Bewegung ohne Verb
+    if (verb === null && spec === null && obj === null && mot !== null) {
+      if (mot === 57) { motion(57); return; }
+      motion(mot); return;
+    }
+    // "gehe norden"
+    if (verb === 2011) {
+      if (mot !== null) { motion(mot); return; }
+      if (obj !== null) { msg(43); return; }
+      msg(43); return;
+    }
+    if (spec !== null && verb === null) {
+      var s = spec - 3000;
+      if (s >= 1 && s <= 5) { doFoo(s); return; }
+      if (s === 142) { say(msgText(142)); return; }
+      msg(s); return;
+    }
+    if (verb === null && obj !== null) {
+      // "oel tuer" / "wasser pflanze": Fluessigkeit + Ziel -> ausgiessen
+      if ((obj === OIL || obj === WATER) && toks.length > 1 && (at(DOOR) || at(PLANT))) { doPour(obj); return; }
+      // nur ein Objekt: Standardverb ableiten
+      if (mot !== null && (mot === 57)) { look(true); return; }
+      if (mot !== null && toks.length > 1) { motion(mot); return; }
+      if (here(obj)) { say(D.ui.kein_objekt.replace("{0}", esc(objName(obj)))); }
+      else { say(esc(D.ui.hier_nichts)); }
+      return;
+    }
+    if (verb === null && mot !== null) { motion(mot); return; }
+    if (verb === null) { msg(13); return; }
+    /* Verben */
+    var vb = verb - 2000;
+    if (obj !== null && (obj === 6 || obj === 5)) { /* Stab */ }
+    switch (vb) {
+      case 1:  // nehmen
+        if (obj === null) {
+          if (mot === 57) { motion(57); return; }
+          var cand = inferObject(1).filter(function (o) { return g.place[o] !== -1 && o < 100; });
+          if (cand.length === 1) { doTake(cand[0]); } else { msg(cand.length === 0 ? 43 : 61); }
+          return;
+        }
+        doTake(obj); return;
+      case 2:  // ablegen
+        if (obj === null) { msg(61); return; }
+        doDrop(obj); return;
+      case 3:  // sagen
+        if (spec !== null) { var ss = spec - 3000; if (ss >= 1 && ss <= 5) { doFoo(ss); return; } msg(ss); return; }
+        if (mot !== null && (mot === 62 || mot === 65 || mot === 71)) { motion(mot); return; }
+        if (toks.length > 1) {
+          var wd = toks.slice(1).map(function (t) { return t.w; }).join(" ");
+          say("Okay, \"" + esc(wd) + "\".");
+        } else { msg(61); }
+        return;
+      case 4: doUnlock(obj === null ? 0 : obj, false); return;
+      case 6: doUnlock(obj === null ? 0 : obj, true); return;
+      case 7:  // anzuenden
+        if (obj !== null && obj !== LAMP) { msg(110); return; }
+        if (!here(LAMP)) { msg(38); return; }
+        if (g.limit < 0) { msg(184); return; }
+        if (g.prop[LAMP] === 1) { say(msgText(39)); return; }
+        g.prop[LAMP] = 1; msg(39);
+        look(true);
+        return;
+      case 8:
+        if (obj !== null && obj !== LAMP) { msg(110); return; }
+        if (!here(LAMP)) { msg(38); return; }
+        g.prop[LAMP] = 0; msg(40);
+        if (!lit(g.loc)) { msg(16); }
+        return;
+      case 9: doWave(obj === null ? 0 : obj); return;
+      case 10: msg(14); return;
+      case 12: doAttack(obj === null ? 0 : obj); return;
+      case 13: doPour(obj === null ? 0 : obj); return;
+      case 14: doEat(obj === null ? 0 : obj); return;
+      case 15: doDrink(obj === null ? 0 : obj); return;
+      case 16:
+        if (obj === LAMP) { msg(75); } else { msg(76); }
+        return;
+      case 17:
+        if (obj === null) { msg(61); return; }
+        doThrow(obj); return;
+      case 18:
+        g.pending = { type: "quit" };
+        msg(22); return;
+      case 19:
+        if (obj === null) { msg(61); return; }
+        if (toting(obj)) { msg(24); return; }
+        if (g.closed) { msg(138); return; }
+        if (at(obj) || (liqLoc(g.loc) === obj) || (obj === WATER && liq() === WATER && here(BOTTLE))) { msg(94); return; }
+        msg(59); return;
+      case 20: listInventory(); return;
+      case 21: doFeed(obj === null ? 0 : obj); return;
+      case 22: doFill(obj === null ? 0 : obj); return;
+      case 23: doBlast(); return;
+      case 24:
+        var sc = score(false);
+        say(esc(D.ui.punkte.replace("{0}", sc).replace("{1}", g.turns)));
+        return;
+      case 25:
+        if (spec !== null && spec > 3000 && spec <= 3005) { doFoo(spec - 3000); return; }
+        { var kw = toks[0].w; var kidx = { fee: 1, fie: 2, foe: 3, foo: 4, fum: 5 }[kw];
+          if (kidx) { doFoo(kidx); return; } }
+        msg(42); return;
+      case 26: g.brief = true; msg(156); return;
+      case 27: doRead(obj === null ? 0 : obj); return;
+      case 28: doBreak(obj === null ? 0 : obj); return;
+      case 29:
+        if (g.closed && atDwarfClosed()) { msg(199); msg(136); finish(); return; }
+        msg(110); return;
+      case 30:
+        say(esc(D.ui.speichern)); return;
+      case 31:
+        say(esc(D.ui.stunden)); return;
+      default:
+        msg(13);
+    }
+  }
+  function atDwarfClosed() { return here(DWARF); }
+
+  /* ---------- Kommando ---------- */
+  A.cmd = function (text) {
+    var g = G();
+    if (!g || g.over) { return; }
+    text = String(text || "").trim();
+    g.out = [];
+    g.cmdcount++;
+    if (g.pending) {
+      var yn = ynAnswer(text);
+      var p = g.pending;
+      if (yn === null) {
+        if (p.type === "hintq" || p.type === "hint2" || p.type === "hintq2" || p.type === "dragon") {
+          g.pending = null;      // Hinweis-/Drachenfrage: anderer Befehl bricht sie ab
+          p = null;
+        } else {
+          say(esc(D.ui.ja_nein));  // Wiederbelebung / Aufgeben: ausdrueckliche Antwort noetig
+          flushLog(text);
+          return;
+        }
+      }
+      if (p && p.type === "reinc") {
+        if (yn) { reincarnate(); }
+        else { msg(54); finish(); }
+        flushLog(text); return;
+      }
+      if (p && p.type === "quit") {
+        g.pending = null;
+        if (yn) { g.gaveup = true; finish(); } else { msg(54); }
+        flushLog(text); return;
+      }
+      if (p && p.type === "dragon") {
+        g.pending = null;
+        if (yn) { killDragon(); } else { msg(54); }
+        flushLog(text); return;
+      }
+      if (p && p.type === "hintq") {
+        if (!yn) { g.pending = null; msg(54); flushLog(text); return; }
+        p.type = "hint2"; p.stage = 1;
+        say(esc(D.ui.hint_preis.replace("{0}", p.cost)));
+        flushLog(text); return;
+      }
+      if (p && p.type === "hint2") {
+        if (yn) { g.pending = null; g.hintscore += p.cost; g.hintgiven[p.no] = true; say(msgText(p.a)); }
+        else { g.pending = null; msg(54); }
+        flushLog(text); return;
+      }
+      if (p && p.type === "hintq2") {
+        g.pending = null;
+        if (yn) { g.hintscore += 10; g.hintgiven[2] = true; msg(193); } else { msg(54); }
+        flushLog(text); return;
+      }
+    }
+    var toks = parse(text);
+    execute(toks, text);
+    // Zug zaehlt, ausser bei reinen Informationsbefehlen
+    var info = toks.length && toks[0].v >= 2000 && inList([2020, 2024, 2026, 2030, 2031], toks[0].v);
+    if (!info && !g.over) { endTurn(); }
+    if (g.pending && g.pending.type === "reinc") { /* Frage steht schon in out */ }
+    flushLog(text);
+  };
+
+  /* ---------- Ansicht ---------- */
+  var DIRS = [
+    ["NW", "nordwest", 50], ["N", "norden", 45], ["NO", "nordost", 47],
+    ["W", "westen", 44], ["⌖", "schau", 57], ["O", "osten", 43],
+    ["SW", "südwest", 49], ["S", "süden", 46], ["SO", "südost", 48]
+  ];
+  A.view = function () {
+    var g = G(), h = [];
+    if (!g) { return ""; }
+    h.push('<div id="adv-log">');
+    g.log.forEach(function (e, i) {
+      h.push('<div class="adv-turn">');
+      if (e.c) { h.push('<div class="adv-echo">&gt; ' + esc(e.c) + "</div>"); }
+      e.o.forEach(function (p) {
+        if (p === "<hr>") { h.push("<hr>"); }
+        else { h.push('<p class="' + (/^<strong>/.test(p) ? "adv-room" : "adv-p") + '">' + fmt(p) + "</p>"); }
+      });
+      h.push("</div>");
+    });
+    h.push("</div>");
+    if (g.over) {
+      h.push('<p><button class="adv-btn" id="adv-restart">Neu beginnen</button></p>');
+      return h.join("\n");
+    }
+    if (g.pending) {
+      h.push('<p class="adv-yn"><button class="adv-btn adv-cmd" data-cmd="ja">Ja</button> ' +
+             '<button class="adv-btn adv-cmd" data-cmd="nein">Nein</button></p>');
+    } else {
+      h.push('<div id="adv-controls"><div id="adv-compass">');
+      DIRS.forEach(function (d) {
+        if (d[2] === 57) { h.push('<button class="adv-btn adv-cmd" data-cmd="schau" title="Umschauen">·</button>'); }
+        else { h.push('<button class="adv-btn adv-cmd" data-cmd="' + d[1] + '" title="' + d[1] + '">' + d[0] + "</button>"); }
+      });
+      h.push("</div>");
+      h.push('<div id="adv-vert">' +
+        '<button class="adv-btn adv-cmd" data-cmd="hoch">hoch</button>' +
+        '<button class="adv-btn adv-cmd" data-cmd="runter">runter</button>' +
+        '<button class="adv-btn adv-cmd" data-cmd="rein">rein</button>' +
+        '<button class="adv-btn adv-cmd" data-cmd="raus">raus</button>' +
+        '<button class="adv-btn adv-cmd" data-cmd="zurück">zurück</button></div></div>');
+      // Gegenstaende
+      var inv = [], hr = [];
+      objectsHere().forEach(function (o) {
+        if (g.place[o] === -1) { inv.push(o); } else if (g.fixed[o] === 0 && o < 100 && !(o === BIRD && g.prop[BIRD] === 1 && toting(CAGE))) { hr.push(o); }
+      });
+      h.push('<div id="adv-items">');
+      if (hr.length) {
+        h.push('<span class="adv-lbl">Hier:</span> ');
+        hr.forEach(function (o) {
+          h.push('<button class="adv-btn adv-cmd" data-cmd="nimm ' + esc(shortWord(o)) + '">nimm ' + esc(shortLabel(o)) + "</button> ");
+        });
+      }
+      if (inv.length) {
+        h.push('<br><span class="adv-lbl">Bei dir:</span> ');
+        inv.forEach(function (o) {
+          if (o === BIRD) { return; }
+          h.push('<button class="adv-btn adv-cmd" data-cmd="lass ' + esc(shortWord(o)) + '">lass ' + esc(shortLabel(o)) + "</button> ");
+        });
+      }
+      h.push("</div>");
+      h.push('<div id="adv-quick"><button class="adv-btn adv-cmd" data-cmd="inventar">Inventar</button> ' +
+             '<button class="adv-btn adv-cmd" data-cmd="punkte">Punkte</button> ' +
+             '<button class="adv-btn adv-cmd" data-cmd="hilfe">Hilfe</button> ' +
+             '<button class="adv-btn adv-cmd" data-cmd="kurz">Kurz</button></div>');
+    }
+    h.push('<form id="adv-form" autocomplete="off"><span class="adv-prompt">&gt;</span> ' +
+           '<input id="advin" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" ' +
+           'placeholder="Befehl eingeben, z. B. nimm lampe, xyzzy, wirf axt …"> ' +
+           '<button class="adv-btn" type="submit">OK</button></form>');
+    return h.join("\n");
+  };
+  function fmt(p) {
+    if (/^<strong>/.test(p)) { return p; }
+    if (/^&nbsp;/.test(p)) { return p; }
+    return esc(p).replace(/\n/g, "<br>").replace(/&lt;strong&gt;/g, "<strong>").replace(/&lt;\/strong&gt;/g, "</strong>");
+  }
+  function shortWord(o) { return D.firstWord[o] || ("obj" + o); }
+  function shortLabel(o) {
+    var n = objName(o);
+    return n.length > 22 ? n.slice(0, 20) + "…" : n;
+  }
+  A.sidebar = function () {
+    var g = G();
+    if (!g) { return ""; }
+    var lamp = g.prop[LAMP] === 1 ? (g.limit < 0 ? "leer" : "an (" + Math.max(g.limit, 0) + ")") : "aus";
+    var carrying = [];
+    for (var k in g.place) {
+      var o = +k;
+      if (g.place[o] === -1 && o !== WATER && o !== OIL && o !== BIRD) { carrying.push(objName(o)); }
+    }
+    return '<div class="adv-side"><div><strong>Punkte:</strong> ' + score(false) + ' / 350</div>' +
+      "<div><strong>Züge:</strong> " + g.turns + "</div>" +
+      "<div><strong>Lampe:</strong> " + lamp + "</div>" +
+      "<div><strong>Tod:</strong> " + g.numdie + " / " + MAXDIE + "</div>" +
+      "<div class='adv-carry'><strong>Bei dir:</strong> " + (carrying.length ? esc(carrying.join(", ")) : "nichts") + "</div></div>";
+  };
+
+  /* Befehl aus der Oberflaeche */
+  var queued = null;
+  A.run = function (text) {
+    queued = text;
+    Engine.play("Spiel");
+  };
+  A.consume = function () {
+    if (queued !== null) { var q = queued; queued = null; A.cmd(q); }
+  };
+  A.restart = function () { queued = null; Engine.restart(); };
+})();
+
+/* ---- Oberflaeche ---- */
+$(document).on(':passagedisplay', function (ev) {
+  if (ev.passage && ev.passage.title === 'Spiel') {
+    var html = '<div class="adv-status">' + Adv.sidebar() + '</div>' + Adv.view();
+    $('#adv-root').html(html);
+    var lg = document.getElementById('adv-log');
+    var inp = document.getElementById('advin');
+    if (inp) { inp.focus({preventScroll: true}); }
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+});
+$(document).on('click', '.adv-cmd', function () { Adv.run($(this).attr('data-cmd')); });
+$(document).on('click', '#adv-restart', function () { Adv.restart(); });
+$(document).on('submit', '#adv-form', function (e) {
+  e.preventDefault();
+  var v = $('#advin').val();
+  if (String(v).trim() === '') { return; }
+  Adv.run(v);
+});
+
+
+:: Story Stylesheet [stylesheet]
+/* Retro-Terminal: Bernstein auf Schwarz */
+:root { --amber: #ffb000; --amber-dim: #b37b00; --bg: #0a0800; }
+html, body, #story, body.has-ui-bar { background: var(--bg) !important; color: var(--amber); }
+body { font-family: "Cascadia Mono", "Consolas", "Courier New", monospace; font-size: 16px; }
+#passages { max-width: 52em; margin: 0 auto; padding: 1em 1.2em 3em; background: var(--bg); color: var(--amber); }
+#ui-bar { background: #120d00 !important; border-right: 1px solid var(--amber-dim); }
+#ui-bar, #ui-bar * { color: var(--amber) !important; }
+#ui-bar-body button, #ui-bar-body a { color: var(--amber) !important; }
+#story-title { color: var(--amber) !important; }
+a, .link-internal { color: #ffd060; }
+a:hover, .link-internal:hover { color: #fff1c0; }
+hr { border: 0; border-top: 1px dashed var(--amber-dim); margin: 1em 0; }
+
+.adv-title { font-size: 2em; letter-spacing: .15em; margin: .6em 0 .2em; text-shadow: 0 0 6px #ff9a00; }
+.adv-sub { color: var(--amber-dim); margin-top: 0; }
+.adv-credit { color: var(--amber-dim); font-size: .85em; margin-top: 2em; }
+.adv-btnrow a { display: inline-block; border: 1px solid var(--amber); padding: .5em 1em; text-decoration: none; }
+
+.adv-status { border-bottom: 1px solid var(--amber-dim); padding-bottom: .5em; margin-bottom: .8em;
+              display: flex; flex-wrap: wrap; gap: .3em 1.5em; font-size: .9em; }
+.adv-status .adv-side { display: flex; flex-wrap: wrap; gap: .3em 1.5em; }
+.adv-status .adv-carry { flex-basis: 100%; }
+#adv-log { margin-bottom: 1em; }
+.adv-turn { margin-bottom: 1.1em; }
+.adv-echo { color: #ffd060; margin-bottom: .3em; }
+.adv-room { margin: .2em 0; text-transform: uppercase; letter-spacing: .05em; }
+.adv-p { margin: .35em 0; line-height: 1.45; }
+.adv-turn:last-child .adv-p { color: #ffc940; }
+
+#adv-controls { display: flex; flex-wrap: wrap; gap: 1em; align-items: flex-start; margin-bottom: .8em; }
+#adv-compass { display: grid; grid-template-columns: repeat(3, 3em); gap: .25em; }
+#adv-vert { display: flex; flex-wrap: wrap; gap: .25em; align-items: flex-start; align-content: flex-start; }
+#adv-items { line-height: 2.2; margin-bottom: .6em; }
+.adv-lbl { color: var(--amber-dim); }
+.adv-btn { font-family: inherit; font-size: .9em; background: #1a1200; color: var(--amber);
+           border: 1px solid var(--amber-dim); border-radius: 2px; padding: .25em .6em; cursor: pointer; }
+.adv-btn:hover { background: #2b1d00; border-color: var(--amber); }
+#adv-compass .adv-btn { padding: .45em 0; }
+#adv-quick { margin: .4em 0 .8em; }
+#adv-form { display: flex; gap: .5em; align-items: center; margin-top: .5em; }
+#adv-form .adv-prompt { color: #ffd060; }
+#advin { flex: 1; background: #120d00; color: #ffd060; border: 1px solid var(--amber-dim);
+         font-family: inherit; font-size: 1em; padding: .4em .6em; }
+#advin:focus { outline: 1px solid var(--amber); }
+.adv-yn .adv-btn { padding: .5em 1.4em; margin-right: .5em; }
+
+@media (max-width: 40em) {
+  #passages { padding: .6em .8em 3em; font-size: 15px; }
+  #adv-compass { grid-template-columns: repeat(3, 3.2em); }
+}
+

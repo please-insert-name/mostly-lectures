@@ -1,0 +1,6 @@
+C:\Repositories\Projekte\C#\Defishing\Demo\bin\Debug\Demo.exe
+C:\Repositories\Projekte\C#\Defishing\Demo\bin\Debug\Demo.pdb
+C:\Repositories\Projekte\C#\Defishing\Demo\obj\Debug\Demo.csprojAssemblyReference.cache
+C:\Repositories\Projekte\C#\Defishing\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+C:\Repositories\Projekte\C#\Defishing\Demo\obj\Debug\Demo.exe
+C:\Repositories\Projekte\C#\Defishing\Demo\obj\Debug\Demo.pdb

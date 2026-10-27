@@ -1,0 +1,18 @@
+C:\Users\mkroehn\RiderProjects\BalancingDemo\GameObjects\bin\Debug\GameObjects.dll
+C:\Users\mkroehn\RiderProjects\BalancingDemo\GameObjects\bin\Debug\GameObjects.pdb
+C:\Users\mkroehn\RiderProjects\BalancingDemo\GameObjects\obj\Debug\GameObjects.csprojAssemblyReference.cache
+C:\Users\mkroehn\RiderProjects\BalancingDemo\GameObjects\obj\Debug\GameObjects.csproj.CoreCompileInputs.cache
+C:\Users\mkroehn\RiderProjects\BalancingDemo\GameObjects\obj\Debug\GameObjects.dll
+C:\Users\mkroehn\RiderProjects\BalancingDemo\GameObjects\obj\Debug\GameObjects.pdb
+C:\Repositories\Projekte\C#\BalancingDemo\GameObjects\bin\Debug\GameObjects.dll
+C:\Repositories\Projekte\C#\BalancingDemo\GameObjects\bin\Debug\GameObjects.pdb
+C:\Repositories\Projekte\C#\BalancingDemo\GameObjects\obj\Debug\GameObjects.csprojAssemblyReference.cache
+C:\Repositories\Projekte\C#\BalancingDemo\GameObjects\obj\Debug\GameObjects.csproj.CoreCompileInputs.cache
+C:\Repositories\Projekte\C#\BalancingDemo\GameObjects\obj\Debug\GameObjects.dll
+C:\Repositories\Projekte\C#\BalancingDemo\GameObjects\obj\Debug\GameObjects.pdb
+C:\Repositories\Education\02 Kurse\Game Mechanics\Block II - Praktische Beispiele\L4 - Gegner-KI 1\BalancingDemo\GameObjects\bin\Debug\GameObjects.dll
+C:\Repositories\Education\02 Kurse\Game Mechanics\Block II - Praktische Beispiele\L4 - Gegner-KI 1\BalancingDemo\GameObjects\bin\Debug\GameObjects.pdb
+C:\Repositories\Education\02 Kurse\Game Mechanics\Block II - Praktische Beispiele\L4 - Gegner-KI 1\BalancingDemo\GameObjects\obj\Debug\GameObjects.csprojAssemblyReference.cache
+C:\Repositories\Education\02 Kurse\Game Mechanics\Block II - Praktische Beispiele\L4 - Gegner-KI 1\BalancingDemo\GameObjects\obj\Debug\GameObjects.csproj.CoreCompileInputs.cache
+C:\Repositories\Education\02 Kurse\Game Mechanics\Block II - Praktische Beispiele\L4 - Gegner-KI 1\BalancingDemo\GameObjects\obj\Debug\GameObjects.dll
+C:\Repositories\Education\02 Kurse\Game Mechanics\Block II - Praktische Beispiele\L4 - Gegner-KI 1\BalancingDemo\GameObjects\obj\Debug\GameObjects.pdb

@@ -1,0 +1,1 @@
+Zustandsautomat und Behavior Tree für Survival Szenario (60min)

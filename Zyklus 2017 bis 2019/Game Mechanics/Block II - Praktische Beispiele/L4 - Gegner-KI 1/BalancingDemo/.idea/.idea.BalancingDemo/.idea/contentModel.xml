@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Repositories\Projekte\C#\BalancingDemo" t="IncludeFlat">
+      <e p="BalancingDemo.sln" t="IncludeFlat" />
+      <e p="Demo" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Demo.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="GameObjects" t="IncludeRecursive">
+        <e p="Actions" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="Heal.cs" t="Include" />
+          <e p="Surrender.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Characters" t="Include">
+          <e p="BaseClass.cs" t="Include" />
+          <e p="Human.cs" t="Include" />
+          <e p="Orc.cs" t="Include" />
+        </e>
+        <e p="Enums" t="Include">
+          <e p="CharacterHands.cs" t="Include" />
+          <e p="CharacterStats.cs" t="Include" />
+          <e p="ObjectCondition.cs" t="Include" />
+          <e p="Weapons.cs" t="Include" />
+          <e p="WeaponSkills.cs" t="Include" />
+        </e>
+        <e p="GameObjects.csproj" t="IncludeRecursive" />
+        <e p="Globals.cs" t="Include" />
+        <e p="Interfaces" t="Include">
+          <e p="IAction.cs" t="Include" />
+          <e p="ICharacter.cs" t="Include" />
+          <e p="IWeapon.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Weapons" t="Include">
+          <e p="BareHands.cs" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\mkroe\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_BalancingDemo.-137411923.00" t="ExcludeRecursive" />
+  </component>
+</project>
